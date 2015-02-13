@@ -1,1 +1,1 @@
-# AutoRABIT
+ECHO is on.
