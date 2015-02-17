@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Hotel</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Hotels</value>
+    </caseValues>
+    <fields>
+        <label><!-- Check In --></label>
+        <name>Check_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check Out --></label>
+        <name>Check_Out__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+        <picklistValues>
+            <masterLabel>Bloomington</masterLabel>
+            <translation><!-- Bloomington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brooklyn Park</masterLabel>
+            <translation><!-- Brooklyn Park --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lakeville</masterLabel>
+            <translation><!-- Lakeville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles</masterLabel>
+            <translation><!-- Los Angeles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minneapolis</masterLabel>
+            <translation><!-- Minneapolis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oakland</masterLabel>
+            <translation><!-- Oakland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rochester</masterLabel>
+            <translation><!-- Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Paul</masterLabel>
+            <translation><!-- Saint Paul --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Diego</masterLabel>
+            <translation><!-- San Diego --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco</masterLabel>
+            <translation><!-- San Francisco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Jose</masterLabel>
+            <translation><!-- San Jose --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rooms --></label>
+        <name>Rooms__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Hotel Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- California User --></label>
+        <name>California_User</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Minnesota User --></label>
+        <name>Minnesota_User</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

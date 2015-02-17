@@ -1,0 +1,7 @@
+c824a803e5e3ee6fe65d1b9e7013ab1a344a69ab	HEAD
+fb0901923716a30e6ae9341422804e98903faa23	refs/heads/Dev-to-Int
+c824a803e5e3ee6fe65d1b9e7013ab1a344a69ab	refs/heads/Dev1
+70c8d2d2ab8d32ceca4a76600044a8f05de926f8	refs/heads/Dev2-CI
+fb0901923716a30e6ae9341422804e98903faa23	refs/heads/Int-to-QA
+c824a803e5e3ee6fe65d1b9e7013ab1a344a69ab	refs/heads/master
+fb0901923716a30e6ae9341422804e98903faa23	refs/remotes/origin/Dev2-CI
