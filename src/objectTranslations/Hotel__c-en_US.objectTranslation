@@ -112,8 +112,8 @@
         <name>California_User</name>
     </recordTypes>
     <recordTypes>
-        <label><!-- Minneapolis User --></label>
-        <name>Minneapolis_User</name>
+        <label><!-- Minnesota User --></label>
+        <name>Minnesota_User</name>
     </recordTypes>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>
