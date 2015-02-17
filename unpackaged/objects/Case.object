@@ -459,6 +459,7 @@
         </filters>
         <label>My Open Cases</label>
     </listViews>
+<<<<<<< HEAD
     <listViews>
         <fullName>Queue1_Case</fullName>
         <filterScope>Queue</filterScope>
@@ -468,6 +469,8 @@
             <allInternalUsers></allInternalUsers>
         </sharedTo>
     </listViews>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
     <searchLayouts>
         <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>

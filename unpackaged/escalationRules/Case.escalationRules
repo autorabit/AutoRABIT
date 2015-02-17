@@ -21,12 +21,20 @@
                 <value>High</value>
             </criteriaItems>
             <escalationAction>
+<<<<<<< HEAD
                 <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+                <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <assignedToTemplate>unfiled$public/SupportEscalatedCaseReassignment</assignedToTemplate>
                 <assignedToType>User</assignedToType>
                 <minutesToEscalation>120</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
+<<<<<<< HEAD
                 <notifyTo>dev1@techsophy.com</notifyTo>
+=======
+                <notifyTo>nishanthkumar.y@gmail.com</notifyTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <notifyToTemplate>unfiled$public/SupportEscalatedCaseNotification</notifyToTemplate>
             </escalationAction>
             <escalationStartTime>CaseCreation</escalationStartTime>
@@ -49,12 +57,20 @@
                 <value>Medium,Low</value>
             </criteriaItems>
             <escalationAction>
+<<<<<<< HEAD
                 <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+                <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <assignedToTemplate>unfiled$public/SupportEscalatedCaseReassignment</assignedToTemplate>
                 <assignedToType>User</assignedToType>
                 <minutesToEscalation>360</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
+<<<<<<< HEAD
                 <notifyTo>dev1@techsophy.com</notifyTo>
+=======
+                <notifyTo>nishanthkumar.y@gmail.com</notifyTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <notifyToTemplate>unfiled$public/SupportEscalatedCaseNotification</notifyToTemplate>
             </escalationAction>
             <escalationStartTime>CaseCreation</escalationStartTime>
@@ -77,12 +93,20 @@
                 <value>High</value>
             </criteriaItems>
             <escalationAction>
+<<<<<<< HEAD
                 <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+                <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <assignedToTemplate>unfiled$public/SupportEscalatedCaseReassignment</assignedToTemplate>
                 <assignedToType>User</assignedToType>
                 <minutesToEscalation>240</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
+<<<<<<< HEAD
                 <notifyTo>dev1@techsophy.com</notifyTo>
+=======
+                <notifyTo>nishanthkumar.y@gmail.com</notifyTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <notifyToTemplate>unfiled$public/SupportEscalatedCaseNotification</notifyToTemplate>
             </escalationAction>
             <escalationStartTime>CaseCreation</escalationStartTime>
@@ -105,12 +129,20 @@
                 <value>Medium,Low</value>
             </criteriaItems>
             <escalationAction>
+<<<<<<< HEAD
                 <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+                <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <assignedToTemplate>unfiled$public/SupportEscalatedCaseReassignment</assignedToTemplate>
                 <assignedToType>User</assignedToType>
                 <minutesToEscalation>480</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
+<<<<<<< HEAD
                 <notifyTo>dev1@techsophy.com</notifyTo>
+=======
+                <notifyTo>nishanthkumar.y@gmail.com</notifyTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <notifyToTemplate>unfiled$public/SupportEscalatedCaseNotification</notifyToTemplate>
             </escalationAction>
             <escalationStartTime>CaseCreation</escalationStartTime>
@@ -128,12 +160,20 @@
                 <value>Silver</value>
             </criteriaItems>
             <escalationAction>
+<<<<<<< HEAD
                 <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+                <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <assignedToTemplate>unfiled$public/SupportEscalatedCaseReassignment</assignedToTemplate>
                 <assignedToType>User</assignedToType>
                 <minutesToEscalation>720</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
+<<<<<<< HEAD
                 <notifyTo>dev1@techsophy.com</notifyTo>
+=======
+                <notifyTo>nishanthkumar.y@gmail.com</notifyTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <notifyToTemplate>unfiled$public/SupportEscalatedCaseNotification</notifyToTemplate>
             </escalationAction>
             <escalationStartTime>CaseCreation</escalationStartTime>
@@ -151,12 +191,20 @@
                 <value>Bronze</value>
             </criteriaItems>
             <escalationAction>
+<<<<<<< HEAD
                 <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+                <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <assignedToTemplate>unfiled$public/SupportEscalatedCaseReassignment</assignedToTemplate>
                 <assignedToType>User</assignedToType>
                 <minutesToEscalation>1440</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
+<<<<<<< HEAD
                 <notifyTo>dev1@techsophy.com</notifyTo>
+=======
+                <notifyTo>nishanthkumar.y@gmail.com</notifyTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <notifyToTemplate>unfiled$public/SupportEscalatedCaseNotification</notifyToTemplate>
             </escalationAction>
             <escalationStartTime>CaseCreation</escalationStartTime>
@@ -174,12 +222,20 @@
                 <value>Gold,Platinum</value>
             </criteriaItems>
             <escalationAction>
+<<<<<<< HEAD
                 <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+                <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <assignedToTemplate>unfiled$public/SupportEscalatedCaseReassignment</assignedToTemplate>
                 <assignedToType>User</assignedToType>
                 <minutesToEscalation>360</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
+<<<<<<< HEAD
                 <notifyTo>dev1@techsophy.com</notifyTo>
+=======
+                <notifyTo>nishanthkumar.y@gmail.com</notifyTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <notifyToTemplate>unfiled$public/SupportEscalatedCaseNotification</notifyToTemplate>
             </escalationAction>
             <escalationStartTime>CaseCreation</escalationStartTime>
@@ -197,17 +253,26 @@
                 <value>Silver,Bronze</value>
             </criteriaItems>
             <escalationAction>
+<<<<<<< HEAD
                 <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+                <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <assignedToTemplate>unfiled$public/SupportEscalatedCaseReassignment</assignedToTemplate>
                 <assignedToType>User</assignedToType>
                 <minutesToEscalation>1080</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
+<<<<<<< HEAD
                 <notifyTo>dev1@techsophy.com</notifyTo>
+=======
+                <notifyTo>nishanthkumar.y@gmail.com</notifyTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
                 <notifyToTemplate>unfiled$public/SupportEscalatedCaseNotification</notifyToTemplate>
             </escalationAction>
             <escalationStartTime>CaseCreation</escalationStartTime>
         </ruleEntry>
     </escalationRule>
+<<<<<<< HEAD
     <escalationRule>
         <fullName>fffffffffffff</fullName>
         <active>false</active>
@@ -221,4 +286,6 @@
             <escalationStartTime>CaseCreation</escalationStartTime>
         </ruleEntry>
     </escalationRule>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
 </EscalationRules>

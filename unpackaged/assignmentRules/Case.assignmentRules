@@ -4,7 +4,11 @@
         <fullName>Standard</fullName>
         <active>true</active>
         <ruleEntry>
+<<<<<<< HEAD
             <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+            <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.BillingCountry</field>
@@ -23,7 +27,11 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
+<<<<<<< HEAD
             <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+            <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.BillingCountry</field>
@@ -42,7 +50,11 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
+<<<<<<< HEAD
             <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+            <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.BillingCountry</field>
@@ -61,7 +73,11 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
+<<<<<<< HEAD
             <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+            <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.BillingCountry</field>
@@ -80,7 +96,11 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
+<<<<<<< HEAD
             <assignedTo>dev1@techsophy.com</assignedTo>
+=======
+            <assignedTo>nishanthkumar.y@gmail.com</assignedTo>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.Type</field>

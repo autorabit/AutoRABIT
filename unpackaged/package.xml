@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+<<<<<<< HEAD
         <members>FlightData</members>
         <members>HotelData</members>
         <name>ApexClass</name>
@@ -11,6 +12,8 @@
         <name>ApexTrigger</name>
     </types>
     <types>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Case</members>
         <members>Lead</members>
         <name>AssignmentRules</name>
@@ -25,10 +28,13 @@
         <name>Community</name>
     </types>
     <types>
+<<<<<<< HEAD
         <members>Travel_Booking</members>
         <name>CustomApplication</name>
     </types>
     <types>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Account.Active__c</members>
         <members>Account.CustomerPriority__c</members>
         <members>Account.NumberofLocations__c</members>
@@ -42,6 +48,7 @@
         <members>Case.SLAViolation__c</members>
         <members>Contact.Languages__c</members>
         <members>Contact.Level__c</members>
+<<<<<<< HEAD
         <members>Flights__c.Adults__c</members>
         <members>Flights__c.Amount__c</members>
         <members>Flights__c.Childrens__c</members>
@@ -56,6 +63,8 @@
         <members>Hotel__c.City__c</members>
         <members>Hotel__c.Rooms__c</members>
         <members>ISO_Codes__c.Abbrevation__c</members>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Lead.CurrentGenerators__c</members>
         <members>Lead.NumberofLocations__c</members>
         <members>Lead.Primary__c</members>
@@ -92,9 +101,12 @@
         <members>DuplicateRecordSet</members>
         <members>Event</members>
         <members>FeedItem</members>
+<<<<<<< HEAD
         <members>Flights__c</members>
         <members>Hotel__c</members>
         <members>ISO_Codes__c</members>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Idea</members>
         <members>Lead</members>
         <members>LeadCleanInfo</members>
@@ -120,6 +132,7 @@
         <name>CustomObject</name>
     </types>
     <types>
+<<<<<<< HEAD
         <members>Flights__c-en_US</members>
         <members>Hotel__c-en_US</members>
         <members>ISO_Codes__c-en_US</members>
@@ -131,6 +144,8 @@
         <name>CustomTab</name>
     </types>
     <types>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>unfiled$public/MarketingProductInquiryResponse</members>
         <members>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</members>
         <members>unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE</members>
@@ -176,11 +191,15 @@
         <members>DandBCompany-D%26B Company Layout</members>
         <members>DuplicateRecordSet-Duplicate Record Set Layout</members>
         <members>Event-Event Layout</members>
+<<<<<<< HEAD
         <members>Flights__c-California User</members>
         <members>Flights__c-Flight Layout</members>
         <members>Flights__c-Minneapolis User</members>
         <members>Global-Global Layout</members>
         <members>Hotel__c-Hotel Layout</members>
+=======
+        <members>Global-Global Layout</members>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Idea-Idea Layout</members>
         <members>Lead-Lead %28Marketing%29 Layout</members>
         <members>Lead-Lead %28Sales%29 Layout</members>
@@ -202,7 +221,10 @@
         <members>Solution-Solution Layout</members>
         <members>Task-Task Layout</members>
         <members>User-User Layout</members>
+<<<<<<< HEAD
         <members>UserAlt-User Profile Layout</members>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <name>Layout</name>
     </types>
     <types>
@@ -222,7 +244,10 @@
         <members>Case.AllOpenCases</members>
         <members>Case.MyCases</members>
         <members>Case.MyOpenCases</members>
+<<<<<<< HEAD
         <members>Case.Queue1_Case</members>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Contact.AllContacts</members>
         <members>Contact.BirthdaysThisMonth</members>
         <members>Contact.MyContacts</members>
@@ -292,16 +317,22 @@
         <members>SolutionManager</members>
         <members>Standard</members>
         <members>StandardAul</members>
+<<<<<<< HEAD
         <members>Travel Agent</members>
         <members>Travel User</members>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Work%2Ecom Only User</members>
         <name>Profile</name>
     </types>
     <types>
+<<<<<<< HEAD
         <members>Queue1</members>
         <name>Queue</name>
     </types>
     <types>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Defer</members>
         <members>EditDescription</members>
         <members>LogACall</members>
@@ -322,6 +353,7 @@
         <name>QuickAction</name>
     </types>
     <types>
+<<<<<<< HEAD
         <members>Flights__c.California_User</members>
         <members>Flights__c.Minneapolis_User</members>
         <members>Hotel__c.California_User</members>
@@ -329,6 +361,8 @@
         <name>RecordType</name>
     </types>
     <types>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>ApexDevNet</members>
         <name>RemoteSiteSetting</name>
     </types>
@@ -373,9 +407,12 @@
         <members>DuplicateRecordSet</members>
         <members>Event</members>
         <members>FeedItem</members>
+<<<<<<< HEAD
         <members>Flights__c</members>
         <members>Hotel__c</members>
         <members>ISO_Codes__c</members>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Idea</members>
         <members>Lead</members>
         <members>Macro</members>
@@ -397,6 +434,7 @@
         <name>Workflow</name>
     </types>
     <types>
+<<<<<<< HEAD
         <members>Flights__c.Amount_Update</members>
         <name>WorkflowFieldUpdate</name>
     </types>
@@ -406,6 +444,8 @@
         <name>WorkflowRule</name>
     </types>
     <types>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <members>Account</members>
         <members>Activities</members>
         <members>Address</members>

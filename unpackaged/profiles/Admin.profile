@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+<<<<<<< HEAD
     <applicationVisibilities>
         <application>Travel_Booking</application>
         <default>false</default>
@@ -13,6 +14,8 @@
         <apexClass>HotelData</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
@@ -725,6 +728,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>true</editable>
         <field>Flights__c.Adults__c</field>
         <readable>true</readable>
@@ -790,6 +794,8 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <editable>false</editable>
         <field>Idea.Attachment</field>
         <readable>false</readable>
@@ -1256,6 +1262,7 @@
         <layout>Event-Event Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>Flights__c-Flight Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1281,6 +1288,11 @@
         <recordType>Hotel__c.Minnesota_User</recordType>
     </layoutAssignments>
     <layoutAssignments>
+=======
+        <layout>Global-Global Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <layout>Idea-Idea Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1322,9 +1334,12 @@
     <layoutAssignments>
         <layout>User-User Layout</layout>
     </layoutAssignments>
+<<<<<<< HEAD
     <layoutAssignments>
         <layout>UserAlt-User Profile Layout</layout>
     </layoutAssignments>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -1403,6 +1418,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+<<<<<<< HEAD
         <object>Flights__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -1421,6 +1437,8 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <object>Idea</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -1498,6 +1516,7 @@
     </objectPermissions>
     <recordTypeVisibilities>
         <default>false</default>
+<<<<<<< HEAD
         <recordType>Flights__c.California_User</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -1513,10 +1532,13 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <recordType>Idea.InternalIdeasIdeaRecordType</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
+<<<<<<< HEAD
         <tab>Flights__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -1525,6 +1547,8 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <tab>standard-Account</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -1581,12 +1605,23 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+<<<<<<< HEAD
+=======
+        <tab>standard-SocialPersona</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <tab>standard-Solution</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-StreamingChannel</tab>
+<<<<<<< HEAD
         <visibility>DefaultOff</visibility>
+=======
+        <visibility>DefaultOn</visibility>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
@@ -1623,10 +1658,13 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>AuthorApex</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <name>CanInsertFeedSystemFields</name>
     </userPermissions>
     <userPermissions>
@@ -1679,10 +1717,13 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>CreatePackaging</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <name>CreateReportFolders</name>
     </userPermissions>
     <userPermissions>
@@ -1799,18 +1840,24 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>InstallPackaging</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <name>ManageAnalyticSnapshots</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>ManageAuthProviders</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <name>ManageBusinessHourHolidays</name>
     </userPermissions>
     <userPermissions>
@@ -1967,18 +2014,24 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>ModifyAllData</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <name>NewReportBuilder</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>PublishPackaging</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <name>ResetPasswords</name>
     </userPermissions>
     <userPermissions>
@@ -2015,10 +2068,13 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>ViewAllData</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <name>ViewAllUsers</name>
     </userPermissions>
     <userPermissions>

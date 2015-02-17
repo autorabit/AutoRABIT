@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+<<<<<<< HEAD
     <applicationVisibilities>
         <application>Travel_Booking</application>
         <default>false</default>
@@ -13,6 +14,8 @@
         <apexClass>HotelData</apexClass>
         <enabled>false</enabled>
     </classAccesses>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
@@ -726,6 +729,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>Flights__c.Adults__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -791,6 +795,8 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <field>Idea.Attachment</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1256,6 +1262,7 @@
         <layout>Event-Event Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>Flights__c-Flight Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1281,6 +1288,11 @@
         <recordType>Hotel__c.Minnesota_User</recordType>
     </layoutAssignments>
     <layoutAssignments>
+=======
+        <layout>Global-Global Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
         <layout>Idea-Idea Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1322,6 +1334,7 @@
     <layoutAssignments>
         <layout>User-User Layout</layout>
     </layoutAssignments>
+<<<<<<< HEAD
     <layoutAssignments>
         <layout>UserAlt-User Profile Layout</layout>
     </layoutAssignments>
@@ -1340,6 +1353,8 @@
         <recordType>Hotel__c.Minnesota_User</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Idea.InternalIdeasIdeaRecordType</recordType>

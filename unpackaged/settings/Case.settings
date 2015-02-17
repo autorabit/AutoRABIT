@@ -3,9 +3,15 @@
     <caseAssignNotificationTemplate>unfiled$public/SupportCaseAssignmentNotification</caseAssignNotificationTemplate>
     <caseCreateNotificationTemplate>unfiled$public/SupportCaseCreatedPhoneInquiries</caseCreateNotificationTemplate>
     <closeCaseThroughStatusChange>false</closeCaseThroughStatusChange>
+<<<<<<< HEAD
     <defaultCaseOwner>dev1@techsophy.com</defaultCaseOwner>
     <defaultCaseOwnerType>User</defaultCaseOwnerType>
     <defaultCaseUser>dev1@techsophy.com</defaultCaseUser>
+=======
+    <defaultCaseOwner>nishanthkumar.y@gmail.com</defaultCaseOwner>
+    <defaultCaseOwnerType>User</defaultCaseOwnerType>
+    <defaultCaseUser>nishanthkumar.y@gmail.com</defaultCaseUser>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
     <emailToCase>
         <enableEmailToCase>false</enableEmailToCase>
     </emailToCase>
