@@ -152,6 +152,10 @@
         <name>EscalationRules</name>
     </types>
     <types>
+        <members>Admin_Group</members>
+        <name>Group</name>
+    </types>
+    <types>
         <members>DE Default</members>
         <name>HomePageLayout</name>
     </types>
