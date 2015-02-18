@@ -218,5 +218,5 @@
         <lookupPhoneDialogsAdditionalFields>CONTRACT.OWNERALIAS</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>ORDERS.ORDER_NUMBER</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

@@ -242,10 +242,10 @@
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>Minneapolis_User</fullName>
+        <fullName>Minnesota_User</fullName>
         <active>true</active>
-        <description>Displays Cities Available in Minneapolis only.</description>
-        <label>Minneapolis User</label>
+        <description>Displays Cities Available in Minnesota only.</description>
+        <label>Minnesota User</label>
         <picklistValues>
             <picklist>City__c</picklist>
             <values>

@@ -9,6 +9,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>DeletePhotoAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>EditUserAction</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -41,7 +45,15 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>UpdatePhotoAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>UserActivationAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewPhotoAction</actionName>
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
