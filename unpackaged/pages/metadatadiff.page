@@ -1,0 +1,66 @@
+<apex:page controller="metadataDiffController" action="{!onLoadMetaDataDiffPage}"  sidebar="false">
+    <apex:form >
+        <div style="width:100%;height:30px;background: linear-gradient(#d7d7d7, #ffffff, #d7d7d7);">
+            <apex:outputText value="Metadata difference between Source and Destination." style="font-family: Consolas;margin-left:50px;padding-top:20px;font-size:17px;"/>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <div style="width:400px;height:40px;color:white;background: linear-gradient(#1a80c2, #16aae5);margin-left:40px;">
+                                <br/>
+                                <apex:outputText value="Objects" style="font-family: Consolas;margin-left:10px;font-size:17px;"/>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div style="width:398px;height:500px;border: 1px solid #1a80c2;color:white;background-color:#fffff;overflow:auto;margin-left:40px;">
+                                <apex:repeat value="{!srcobj}" var="s">
+                                    <apex:outputText id="op2" value="{!s}<br/>" escape="false" style="color:black;font-family: Consolas;margin-left:10px;font-size:15px;overflow:auto;word-wrap: break-word;" />
+                                </apex:repeat>
+                            </div>
+                        </tr>
+                    </table>    
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <div style="width:400px;height:40px;color:white;background: linear-gradient(#1a80c2, #16aae5);margin-left:20px;">
+                                <br/>
+                                <apex:outputText value="Validation Rules" style="vertical-align: middle ;font-family: Consolas;margin-left:10px;font-size:17px;"/>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div id="div2" style="width:398px;height:500px;border: 1px solid #1a80c2;color:white;background-color:#ffffff;margin-left:20px;overflow:auto;"> 
+                                <apex:repeat value="{!srcvalidation}" var="flds" id="rp2">
+                                    <apex:outputText id="op2" value="{!flds}<br/>" escape="false" style="color:black;font-family: Consolas;margin-left:10px;font-size:15px;overflow:auto;word-wrap: break-word;"/>
+                                </apex:repeat>
+                            </div>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <div style="width:400px;height:40px;color:white;background: linear-gradient(#1a80c2, #16aae5);margin-left:20px;">
+                                <br/>
+                                <apex:outputText value="Triggers" style="font-family: Consolas;margin-left:10px;font-size:17px;"/>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div id="div3" style="width:398px;height:500px;border: 1px solid #1a80c2;color:white;background-color:#ffffff;margin-left:20px;overflow:auto;"> 
+                                <apex:repeat value="{!srcTrigg}" var="trgs" id="rp3">
+                                    <apex:outputText id="op2" value="{!trgs}<br/>" escape="false" style="color:black;font-family: Consolas;margin-left:10px;font-size:15px;overflow:auto;word-wrap: break-word;"/>
+                                </apex:repeat>
+                            </div>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <div style="width:100%;height:30px;background: linear-gradient(#d7d7d7, #ffffff, #d7d7d7);text-align:right;">
+            <apex:commandButton value="Continue" action="{!loadSfObjects}" style="margin-left:45px;; width: 90px; height: 29px; font-size: 13px; color: white; background: linear-gradient(rgb(26, 128, 194), rgb(22, 170, 229)) repeat scroll 0% 0% transparent;" immediate="true"/>
+            <apex:commandButton value="Cancel" action="{!Cancel}" style="margin-left:0px;; width: 90px; height: 29px; font-size: 13px; color: white; background: linear-gradient(rgb(26, 128, 194), rgb(22, 170, 229)) repeat scroll 0% 0% transparent;" immediate="true"/> 
+       </div>
+    </apex:form>
+</apex:page>

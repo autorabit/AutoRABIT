@@ -1,0 +1,5 @@
+<apex:page standardController="TariffPlan__c">
+<apex:form >
+  <apex:commandButton action="{!save}" value="TestActionOverride" id="theButton"/>
+  </apex:form>
+</apex:page>

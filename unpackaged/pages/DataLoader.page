@@ -1,0 +1,140 @@
+<apex:page controller="DataloaderLoginController" action="{!onLoadPage}" sidebar="false" showChat="false">
+    <script type="text/javascript" language="javascript"> 
+        function getChangedsurlVal(){
+            surlVal();
+        } 
+        function getChangeddurlVal(){
+            durlVal();
+        } 
+    </script>
+    <apex:pageMessages id="pgm"/>
+    <apex:outputPanel id="oplid">
+        <apex:outputPanel rendered="{!outputid}">
+        <apex:pageBlock >
+            <apex:form >
+                <apex:actionFunction action="{!getsurlValue}" name="surlVal" reRender="surl_id"/>
+                <apex:actionFunction action="{!getdurlValue}" name="durlVal" reRender="durl_id"/>
+                <center>
+                    <div style="border-radius: 10px;border: 1px solid #1797c0;width:1000px;height:440px;border-top-left-radius:10px 10px;border-top-right-radius:10px 10px;border-bottom-left-radius:10px 10px;border-bottom-right-radius:10px 10px;">
+                        <div style="background: linear-gradient(#1797c0, #2eb9e7);background-color:width:100%;height:50px;border-top-left-radius:10px 10px;border-top-right-radius:10px 10px;border-bottom-left-radius:0px 0px;border-bottom-right-radius:0px 0px;">
+                            <br/>
+                            <apex:outputText style="font-weight: bold;font-size: 15px;color:#ffffff;" value="Log into Salesforce.com"/>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <br/>
+                                    <div style="border-radius: 10px;border: 1px solid #1797c0;width:470px;height:290px;border-top-left-radius:10px 10px;border-top-right-radius:10px 10px;border-bottom-left-radius:10px 10px;border-bottom-right-radius:10px 10px;">
+                                        <center>
+                                            <br/>
+                                            <apex:outputText style="font-size: 15px;color:#1797c0;" value="Source Organization"/>
+                                            <br/>
+                                            <br/>
+                                            <apex:outputPanel id="opid">
+                                            <apex:pageBlockSection columns="1" >
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <apex:pageBlockSectionItem >
+                                                               <apex:outputLabel style="margin-align:right;"> UserName</apex:outputLabel>
+                                                               <apex:outputPanel layout="block" styleClass="requiredInput">
+                                                                  <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                                                  <apex:inputText value="{!susername}" size="40"/>
+                                                               </apex:outputPanel>
+                                                            </apex:pageBlockSectionItem>
+                                                             <apex:pageBlockSectionItem >
+                                                               <apex:outputLabel style="margin-align:right;"> Password</apex:outputLabel>
+                                                               <apex:outputPanel layout="block" styleClass="requiredInput">
+                                                                  <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                                                  <apex:inputText value="{!spassword }" size="40"/>
+                                                               </apex:outputPanel>
+                                                            </apex:pageBlockSectionItem>
+                                                             <apex:pageBlockSectionItem >
+                                                               <apex:outputLabel style="margin-align:right;"> SecurityToken</apex:outputLabel>
+                                                               <apex:outputPanel layout="block" styleClass="requiredInput">
+                                                                  <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                                                  <apex:inputText value="{!ssecuritytoken}" size="40"/>
+                                                               </apex:outputPanel>
+                                                            </apex:pageBlockSectionItem>
+                                                            <apex:selectList multiselect="false" size="0" label="Environment" value="{!senvironment}" onchange="getChangedsurlVal()" style="width: 257px;">
+                                                                   <apex:selectOption itemLabel="Production or Development Edition" itemValue="https://login.salesforce.com"/>
+                                                                   <apex:selectOption itemLabel="Sandbox" itemValue="https://test.salesforce.com"/>
+                                                                   <apex:selectOption itemLabel="Pre-Release" itemValue="https://prerellogin.pre.salesforce.com"/>
+                                                             </apex:selectList>
+                                                             <apex:inputText label="Host Name" value="{!surl}" size="40" disabled="true" id="surl_id"/>
+                                                             <apex:commandButton value="{!sButtonText}" action="{!loginToSourceOrg}" reRender="opid,msg1,msg2,pgm,dLogin_id" style="height:27px;width:80px;color:white;background: linear-gradient(#1797c0, #2eb9e7);margin-left:151px;margin-top:10px;" id="sLogin_id"/>
+                                                             <apex:outputText value="{!ConnSuccessMsg}" id="msg1" style="color:green;text-align: center;" rendered="{!IF(ConnSuccessMsg != '','true','false')}"/>
+                                                             <apex:outputText value="{!ConnFailMsg}" id="msg2" style="color:red;text-align: center;" rendered="{!IF(ConnFailMsg!= '','true','false')}"/>
+                                                            </td>
+                                                    </tr>
+                                                </table>
+                                                </apex:pageBlockSection>
+                                            </apex:outputPanel>
+                                        </center>
+                                    </div>
+                                </td>
+                                <td>
+                                    <br/>
+                                    <div style="border-radius: 10px;border: 1px solid #1797c0;margin-left:5px;width:470px;height:290px;border-top-left-radius:10px 10px;border-top-right-radius:10px 10px;border-bottom-left-radius:10px 10px;border-bottom-right-radius:10px 10px;">
+                                        <center>
+                                            <br/>
+                                            <apex:outputText style="font-size: 15px;color:#1797c0;" value="Destination Organization"/>
+                                            <br/>
+                                            <br/>
+                                            <apex:outputPanel id="op1id" >
+                                              <apex:pageBlockSection columns="1" >
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <apex:pageBlockSectionItem >
+                                                               <apex:outputLabel style="margin-align:right;"> UserName</apex:outputLabel>
+                                                               <apex:outputPanel layout="block" styleClass="requiredInput">
+                                                                  <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                                                  <apex:inputText value="{!dusername}" size="40"/>
+                                                               </apex:outputPanel>
+                                                            </apex:pageBlockSectionItem>
+                                                             <apex:pageBlockSectionItem >
+                                                               <apex:outputLabel style="margin-align:right;"> Password</apex:outputLabel>
+                                                               <apex:outputPanel layout="block" styleClass="requiredInput">
+                                                                  <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                                                  <apex:inputText value="{!dpassword }" size="40"/>
+                                                               </apex:outputPanel>
+                                                            </apex:pageBlockSectionItem>
+                                                             <apex:pageBlockSectionItem >
+                                                               <apex:outputLabel style="margin-align:right;"> SecurityToken</apex:outputLabel>
+                                                               <apex:outputPanel layout="block" styleClass="requiredInput">
+                                                                  <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                                                  <apex:inputText value="{!dsecuritytoken}" size="40"/>
+                                                               </apex:outputPanel>
+                                                            </apex:pageBlockSectionItem>
+                                                            <apex:selectList multiselect="false" size="0" label="Environment" value="{!denvironment}" onchange="getChangeddurlVal()" style="width: 257px;">
+                                                                   <apex:selectOption itemLabel="Production or Development Edition" itemValue="https://login.salesforce.com"/>
+                                                                   <apex:selectOption itemLabel="Sandbox" itemValue="https://test.salesforce.com"/>
+                                                                   <apex:selectOption itemLabel="Pre-Release" itemValue="https://prerellogin.pre.salesforce.com"/>
+                                                             </apex:selectList>
+                                                             <apex:inputText label="Host Name" value="{!durl}" size="40" disabled="true" id="durl_id"/>
+                                                             <apex:commandButton value="{!dButtonText}" action="{!loginToDestination}" reRender="op1id,op2id,msg3,msg4" style="height:27px;width:80px;color:white;background: linear-gradient(#1797c0, #2eb9e7);margin-left:151px;margin-top:10px;" rendered="{!destinationBtn}" disabled="{!dButtonEnable}" id="dLogin_id"/> 
+                                                            <apex:outputText value="{!ConnSuccessMsg}" id="msg3" style="color:green;text-align:center;" rendered="{!IF(ConnSuccessMsg != '','true','false')}"/>
+                                                            <apex:outputText value="{!ConnFailMsg}" id="msg4" style="color:red;text-align:center;" rendered="{!IF(ConnFailMsg!= '','true','false')}"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                </apex:pageBlockSection>
+                                            </apex:outputPanel>
+                                        </center>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <apex:outputPanel id="op2id">
+                            <apex:commandButton value="Connect" action="{!ShowMetaDataDiffPage}" disabled="{!enableConnect}"  style="height:27px;width:80px;color:white;background: linear-gradient(#1797c0, #2eb9e7);margin-left:0px;margin-top:10px;"/>
+                        </apex:outputPanel>
+                    </div>
+                </center>
+                <br/>
+            </apex:form> 
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:outputPanel>
+</apex:page>

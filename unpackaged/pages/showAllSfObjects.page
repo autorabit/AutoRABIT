@@ -1,0 +1,110 @@
+<apex:page controller="ShowAllSfObjectsController" action="{!onLoadShowAllSfObjects}" sidebar="false" >
+    <style type="text/css">
+        .custPopup{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            width: 500px;
+            margin-left: -250px;
+            top:100px;
+        }
+        .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+    </style>
+    <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"/>
+    <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"/>
+    <apex:stylesheet value="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css"/>
+    <script type="text/javascript">
+        var jQuery = jQuery.noConflict();
+        jQuery(document).ready(function() {
+            jQuery( "#checkInList" ).resizable({
+               stop: function(event, ui) 
+               { 
+                   console.log(ui.size.height); 
+                   jQuery( "#tableContainer" ).height(ui.size.height-10)
+               }
+            });
+        });
+    </script>
+    <apex:form >
+        <apex:pageMessages id="msgDiv" rendered="true"/>
+      <table>
+            <div style="width:20%;height:40px;color:white;background: linear-gradient(#1a80c2, #16aae5);margin-left:10px;">
+                <br/>
+                <apex:outputText value="Select Object" style="margin-left:1%;"/>
+            </div>
+            <tr>
+                <div style="width:19.8%;height:491px;border: 1px solid #d2dfe9;color:white;background: linear-gradient(#d2dfe9, #ffffff);overflow:auto;margin-left:10px;">
+                    <apex:repeat value="{!sfObjList}" var="sfObject">
+                        <apex:commandLink value="{!sfObject.sfObjName}" action="{!getFieldsOfSelectedObj}" style="color:black;font-family: Consolas;margin-left:1%;font-size:15px;text-decoration:none" reRender="sfFields,eQry,vQry">
+                            <apex:param name="API" value="{!sfObject.sfObjApiName}" assignTo="{!selectedObj}"/>
+                        </apex:commandLink>
+                        <br/>
+                    </apex:repeat>
+                </div>
+            </tr>
+        </table> 
+      <apex:outputPanel style="width:77.5%;left:21.5%;position:absolute;top:1.5%;height:auto;float:left;">    
+          <apex:pageBlock >
+              <apex:pageblockSection columns="6" >
+                  <apex:inputText value="{!limitQry}" label="Limit" style="width:50px;"/>
+                  <apex:selectList value="{!fieldName}" style="width:220px;" label="Field" size="1" multiselect="false" id="sfFields">
+                      <apex:selectOptions value="{!allObjFields}"/>
+                  </apex:selectList>
+                  <apex:selectList value="{!oper}" style="width:200px;" label="Operator" size="1" multiselect="false">
+                      <apex:selectOptions value="{!operators}"/>
+                  </apex:selectList>
+                  <apex:inputText value="{!enterValue}" label="Value"/>
+                  <apex:commandButton action="{!addFilter}" image="{!URLFOR($Resource.StaticResource, 'StaticResources/images/add.gif')}" reRender="Filer_id,msgDiv"/>
+                  <apex:commandButton value="Logout" action="{!logoutFrmSf}" style="margin-top: -5px;width: 70px; height: 29px; font-size: 13px; color: white; background: linear-gradient(rgb(26, 128, 194), rgb(22, 170, 229)) repeat scroll 0% 0% transparent;" immediate="true"/> 
+              </apex:pageblockSection>
+          </apex:pageBlock>
+    </apex:outputPanel>
+    <apex:outputPanel style="width:77.5%;left:21.5%;position:absolute;top:11%;float:left;">     
+         <apex:pageBlock >
+          <apex:pageBlockSection columns="1">
+          <apex:outputPanel style="height:450px; overflow:hidden;" id="checkInList">
+                <apex:outputPanel style="height:440px; overflow:auto" id="tableContainer">     
+                    <apex:pageBlockTable value="{!quryFilterList}" var="filter" id="Filer_id"> 
+                      <apex:column value="{!filter.field_name}" headerValue="Filed"/>
+                      <apex:column value="{!filter.operator}" headerValue="operator"/>
+                      <apex:column value="{!filter.value}" headerValue="Value"/>
+                       <apex:column headerValue="Clear">
+                        <apex:commandLink value="delete" action="{!deleteFilter}" reRender="Filer_id">
+                            <apex:param name="id" value="{!filter.guid}" assignTo="{!filterDelId}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                  </apex:pageBlockTable>
+                </apex:outputPanel>
+           </apex:outputPanel>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+      </apex:outputPanel>
+       <apex:outputPanel style="width:77.5%;left:21.5%;position:absolute;top:87%;height:auto;float:left;">
+            <div style="text-align:right;width:100%;height:40px;color:white;background: linear-gradient(#efefef, #e4e4e4);">
+                <apex:commandButton value="Validate Query" action="{!showpopup}" style="margin-left:45px;margin-top: 5px; width: 102px; height: 29px; font-size: 13px; color: white; background: linear-gradient(rgb(26, 128, 194), rgb(22, 170, 229)) repeat scroll 0% 0% transparent;" immediate="true" reRender="tstpopup"/>
+                <apex:commandButton value="Extract" action="{!goToExtractDataPage}" style="margin: 5px 5px 0px 0px; width: 80px; height: 29px; font-size: 13px; color: white; background: linear-gradient(rgb(26, 128, 194), rgb(22, 170, 229)) repeat scroll 0% 0% transparent;" immediate="true" reRender=""/>
+            </div>
+        </apex:outputPanel>
+        <apex:outputPanel id="tstpopup">
+            <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+               {!allrec} Record(s) Found <br/><br/><br/><br/><br/><br/>
+                <apex:commandButton value="Close" action="{!closePopup}" rerender="tstpopup"/>
+            </apex:outputPanel>
+        </apex:outputPanel>  
+  </apex:form>
+</apex:page>

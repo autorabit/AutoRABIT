@@ -1,0 +1,5 @@
+<apex:page >
+    <apex:image url="{!URLFOR($Resource.StaticResource, 'StaticResources/images/build-pass.png')}" style="padding-left:8px;"/>
+    <apex:image url="{!URLFOR($Resource.StaticResource, 'StaticResources/images/build-fail.png')}" style="padding-left:8px;"/>
+    <apex:image url="{!URLFOR($Resource.StaticResource, 'StaticResources/images/build-inprogress.png')}" style="padding-left:8px;"/>
+</apex:page>

@@ -1,0 +1,122 @@
+<apex:page controller="PromotionControler" action="{!onLoadPromotionControler}" sidebar="false" tabStyle="Account">
+    <apex:pageMessages id="msg"/>
+    <apex:form >
+        <script type="text/javascript" language="javascript">     
+            $j = jQuery.noConflict();  
+            function getBuildNumbers(){
+               getProjectBuildNumbers__();     
+            } 
+        </script>  
+        <apex:actionFunction name="getProjectBuildNumbers__" action="{!getProjectBuildSummary}" reRender="bno"/>  
+        <apex:actionPoller action="{!showCurrentPromotionLog}" reRender="msg,log,listSum,logPoller" id="logPoller" interval="5"/>
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="5" title="Promote Details">
+                <apex:outputText >
+                    <u>
+                        <b style="margin-left: 0px; padding-left: 52px;">Rabit Project Details</b>
+                    </u>
+                </apex:outputText>
+                <apex:outputText >
+                    <u>
+                        <b>Salesforce Organization Details</b>
+                    </u>
+                </apex:outputText>
+                <apex:outputText />
+                <apex:outputText />
+                <apex:outputText />
+
+                <apex:selectList label="Project Name" value="{!selProjName}" size="1" multiselect="false" onchange="getBuildNumbers()">
+                    <apex:selectOptions value="{!projectList}"/>
+                </apex:selectList>
+                <apex:selectList multiselect="false" style="width: 230px;" label="Salesforce Organization" size="1" value="{!promoteSforgName}">
+                     <apex:selectOptions value="{!sforgListReg}"/>
+                </apex:selectList>
+                <apex:outputText />
+                <apex:outputText />
+                <apex:outputText />
+
+                <apex:selectList multiselect="false" label="Build Number" size="1" value="{!buildNo}" id="bno">
+                    <apex:selectOptions value="{!buildNumberList}"/>
+                </apex:selectList>
+               <apex:outputText />
+                <apex:outputText />
+                <apex:outputText />
+                <apex:outputText />
+
+                <apex:commandButton style="position:relative;float:right;" value="Promote" action="{!deployBuild}" reRender="msg,log,listSum"/> 
+                <apex:commandButton style="position:relative;float:left;" value="Cancel" action="{!cancel}"/> 
+                <apex:outputText />
+                <apex:outputText />
+                <apex:outputText />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" title="Promotion Log" collapsible="true" id="log">
+                <apex:outputPanel layout="block" style="border: 1px solid #000000;margin-left:6%;overflow:auto;width:1100px;height:200px;" >
+                    <apex:outputText value="{!promoteLog}" escape="false" />
+                </apex:OutputPanel>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Recently Promoted Builds" columns="1" id="listSum">
+                 <apex:pageBlockTable width="100%" value="{!preListOfPromotes}" var="proBuild">
+                <apex:column headerValue="Build Number" width="12%">
+                    <apex:outputText value="{!proBuild.buildNumber}"/>
+                </apex:column>
+                <apex:column headerValue="Server Name" width="20%">
+                    <apex:outputText value="{!proBuild.serverName}"/>
+                </apex:column>
+                <apex:column headerValue="Time" width="25%">
+                    <apex:outputText value="{!proBuild.dTime}"/>
+                </apex:column>
+                <apex:column headerValue="Status" width="25%">
+                    <apex:outputText value="{!proBuild.status}"/>
+                </apex:column>
+                <apex:column width="13%">
+                    <apex:commandLink value="View Log" action="{!showPromotionLog}" reRender="popup">
+                        <apex:param name="projName" value="{!proBuild.projectName}" assignTo="{!proLogOfProjName}"/>
+                        <apex:param name="Bno" value="{!proBuild.buildNumber}" assignTo="{!proLogOfBuildNo}"/>
+                    </apex:commandLink>
+                </apex:column>
+            </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+           <apex:outputPanel id="popup">
+               <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+                    <apex:outputPanel id="popInnerOutputPnl" styleClass="customPopup" layout="block" rendered="{!displayPopUp}">
+                    <apex:commandButton value="  X  " title="Close the popup" action="{!closePopup}" styleClass="closeButton" reRender="popup"/>      
+                         <apex:pageBlockSection columns="1" title="Promotion Log" collapsible="true">
+                             <apex:outputPanel layout="block" style="overflow:auto;width:990px;height:400px;" >
+                                <apex:outputText value="{!previousPromoteLog}" style="margin-left:4%;resize:none;"  escape="false" />
+                             </apex:OutputPanel> 
+                         </apex:pageBlockSection>
+                    </apex:outputPanel>
+            </apex:outputPanel> 
+        </apex:pageBlock>
+    </apex:form>
+    <style type="text/css">
+        .customPopup {
+            background-color: white;
+            border-style: solid;
+            border-width: 2px;
+            left: 12%;
+            padding: 10px;
+            position: absolute;
+            z-index: 9999;
+            width: 1000px;
+            top: 15%;
+        }
+        
+        .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }  
+        
+        .closeButton {
+            float: right;
+        }
+    </style>
+</apex:page>

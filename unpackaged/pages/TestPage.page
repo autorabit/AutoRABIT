@@ -1,0 +1,369 @@
+<apex:page controller="TestPageController" tabStyle="account" action="{!onLoadPageController}" sidebar="false">
+    <apex:pageMessages id="msgDiv" rendered="true"/>
+    <style>
+       .activeTab {background-color: #236FBD; color:white;font-size:12px;padding:4px 20px; cursor:pointer;border:1px #009cec solid;outline:none; background-image:none}
+       .inactiveTab {background-color: lightgrey; color:black;font-size:12px;padding:4px 20px; cursor:pointer;border:1px #ccc solid;outline:none; background-image:none}
+       .red-input{border-left:#F00 4px solid;}
+    </style>
+    <script type="text/javascript" language="javascript"> 
+    function callAjaxMthd(){
+        srce();
+    } 
+    function showTestCaseDiv(){
+       testDiv();
+    }
+    function getComp(){
+        comp();  
+    }
+    function reArrageIntervel(){
+        scheAct();
+    }
+    function getSelectedSchOptTime(){
+        scheOptTime();
+    }
+    </script>
+    <apex:form id="form1"> 
+        <apex:actionFunction action="{!getsourceType}" name="srce" reRender="git"/>
+        <apex:actionFunction action="{!getJiraComponents}" name="comp" reRender="jiracomponents,msgDiv"/>
+        <apex:actionFunction action="{!ShowTestTypesDiv}" name="testDiv" reRender="testtypes,testdiv"/>
+        <apex:actionFunction action="{!getscheduleOption}" name="scheAct" reRender="pbs11"/>
+        <apex:actionFunction action="{!getSelectedSchOptTime}" name="scheOptTime" reRender="pbs11"/>
+        <apex:pageBlock >     
+            <apex:tabPanel switchType="client" selectedTab="Build_tab" id="AccountTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab">
+                <apex:tab label="Project" name="project" id="project_tab" rendered="{!editMode}">
+                    <apex:pageBlockSection collapsible="true" title="Project Information" columns="2">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel >Project Name</apex:outputLabel>
+                            <apex:outputPanel layout="block" styleClass="requiredInput">
+                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                <apex:inputText value="{!name}" rendered="true" disabled="true"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:inputText label="No. of builds to be shown" value="{!noOfShownBuilds}"/> 
+                        <apex:inputcheckbox label="Is Active" value="{!isActive}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection collapsible="true" title="Integrations" columns="2">  
+                        <apex:inputcheckbox label="Project Management System (Jira)" id="jira_id"  value="{!projectMgmtSystem}" >
+                            <apex:actionSupport event="onclick" action="{!HideJiraTab}" reRender="AccountTabPanel,J"/>
+                        </apex:inputcheckbox>
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection >
+                        <apex:commandButton value="Save" action="{!createProject}" style="position:relative;float:right;" reRender="msgDiv"/> 
+                        <apex:commandButton value="Cancel" action="{!cancelProjectCreation}" style="position:relative;float:left;"/> 
+                    </apex:pageBlockSection>
+                </apex:tab>
+                <apex:tab label="Build" name="Build" id="Build_tab">
+                    <apex:pageBlockSection collapsible="true" title="Build Information" columns="2">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel >Project Name</apex:outputLabel>
+                            <apex:outputPanel layout="block" styleClass="requiredInput">
+                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                <apex:inputText value="{!name}" rendered="true" disabled="true" size="40"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:selectList multiselect="false" size="1" value="{!sourceType}" label="Source Type" onchange="callAjaxMthd()">
+                            <apex:selectOption itemLabel="Salesforce Organization" itemValue="sandbox"/>
+                            <apex:selectOption itemLabel="GIT" itemValue="git"/>
+                            <apex:selectOption itemLabel="SVN" itemValue="svn"/>
+                        </apex:selectList>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection collapsible="true" title="{!sourceTitle}" columns="1" id="git">
+                            <apex:selectList multiselect="false" style="width: 277px;" label="Retrieval Salesforce Organization" size="1" value="{!retrivalSforgName}" rendered="{!IF(sourceType == 'sandbox','true','false')}">
+                                <apex:selectOptions value="{!sforgListReg}"/>
+                            </apex:selectList>
+                        
+                        <apex:pageBlockSectionItem rendered="{!IF(sourceType != 'sandbox','true','false')}">
+                            <apex:outputLabel >URL</apex:outputLabel>
+                            <apex:outputPanel layout="block" styleClass="requiredInput">
+                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                <apex:inputText value="{!scmUrl}" size="100"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem rendered="{!IF(sourceType != 'sandbox','true','false')}">
+                            <apex:outputLabel >User Name</apex:outputLabel>
+                            <apex:outputPanel layout="block" styleClass="requiredInput">
+                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                <apex:inputText value="{!scmUserName}" size="40"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem rendered="{!IF(sourceType != 'sandbox','true','false')}">
+                            <apex:outputLabel >Password</apex:outputLabel>
+                            <apex:outputPanel layout="block" styleClass="requiredInput">
+                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                <apex:inputText value="{!scmPassword}" size="40"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    
+                    <apex:pageBlockSection collapsible="true" title="Deployment Salesforce Organization Properties" columns="2">
+                         <apex:selectList multiselect="false" style="width: 277px;" label="Deployment Salesforce Organization" size="1" value="{!deploySforgName}">
+                             <apex:selectOptions value="{!sforgListReg}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection collapsible="true" title="Build Schedule" columns="5" id="pbs11">
+                        <apex:pageBlockSectionItem >
+                            <apex:selectList multiselect="false"  label="" size="0" value="{!scheduleOpt}" onchange="reArrageIntervel()">
+                                <apex:selectOption itemLabel="Daily" itemValue="daily"/>
+                                <apex:selectOption itemLabel="Weekly" itemValue="weekly"/>
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem id="intervel_id" rendered="{!intervelOpt}">
+                            <apex:selectRadio value="{!fTime}" onchange="getSelectedSchOptTime()">
+                                <apex:selectOption itemLabel="Fixed Time" itemValue="fixtime"/>
+                                <apex:selectOption itemLabel="Fixed Interval" itemValue="finterval"/>
+                            </apex:selectRadio>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem rendered="{!(intervelOpt && fTime=='fixtime')}">
+                            <apex:selectList multiselect="false" size="1" label="Hrs:" value="{!fixedtimeHours}">
+                                <apex:selectOption itemLabel="00" itemValue="00"/>
+                                <apex:selectOption itemLabel="01" itemValue="01"/>
+                                <apex:selectOption itemLabel="02" itemValue="02"/>
+                                <apex:selectOption itemLabel="03" itemValue="03"/>
+                                <apex:selectOption itemLabel="04" itemValue="04"/>
+                                <apex:selectOption itemLabel="05" itemValue="05"/>
+                                <apex:selectOption itemLabel="06" itemValue="06"/>
+                                <apex:selectOption itemLabel="07" itemValue="07"/>
+                                <apex:selectOption itemLabel="08" itemValue="08"/>
+                                <apex:selectOption itemLabel="09" itemValue="09"/>
+                                <apex:selectOption itemLabel="10" itemValue="10"/>
+                                <apex:selectOption itemLabel="11" itemValue="11"/>
+                                <apex:selectOption itemLabel="12" itemValue="12"/>
+                                <apex:selectOption itemLabel="13" itemValue="13"/>
+                                <apex:selectOption itemLabel="14" itemValue="14"/>
+                                <apex:selectOption itemLabel="15" itemValue="15"/>
+                                <apex:selectOption itemLabel="16" itemValue="16"/>
+                                <apex:selectOption itemLabel="17" itemValue="17"/>
+                                <apex:selectOption itemLabel="18" itemValue="18"/>
+                                <apex:selectOption itemLabel="19" itemValue="19"/>
+                                <apex:selectOption itemLabel="20" itemValue="20"/>
+                                <apex:selectOption itemLabel="21" itemValue="21"/>
+                                <apex:selectOption itemLabel="22" itemValue="22"/>
+                                <apex:selectOption itemLabel="23" itemValue="23"/>
+                                <apex:selectOption itemLabel="24" itemValue="24"/>
+                            </apex:selectList>
+                            <apex:selectList multiselect="false" label="Mins" size="1" value="{!fixedtimeMints}">
+                                <apex:selectOption itemLabel="00" itemValue="00"/>
+                                <apex:selectOption itemLabel="15" itemValue="15"/>
+                                <apex:selectOption itemLabel="30" itemValue="30"/>
+                                <apex:selectOption itemLabel="45" itemValue="45"/>
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem rendered="{!(intervelOpt && fTime=='finterval')}">
+                            <apex:selectList multiselect="false"  label="" size="0" value="{!fixedintervelHours}">
+                                <apex:selectOption itemLabel="1" itemValue="1"/>
+                                <apex:selectOption itemLabel="2" itemValue="2"/>
+                                <apex:selectOption itemLabel="3" itemValue="3"/>
+                                <apex:selectOption itemLabel="4" itemValue="4"/>
+                                <apex:selectOption itemLabel="5" itemValue="5"/>
+                                <apex:selectOption itemLabel="6" itemValue="6"/>
+                                <apex:selectOption itemLabel="7" itemValue="7"/>
+                                <apex:selectOption itemLabel="8" itemValue="8"/>
+                                <apex:selectOption itemLabel="9" itemValue="9"/>
+                                <apex:selectOption itemLabel="10" itemValue="10"/>
+                                <apex:selectOption itemLabel="11" itemValue="11"/>
+                                <apex:selectOption itemLabel="12" itemValue="12"/>
+                            </apex:selectList>
+                            <apex:selectList multiselect="false"  label="" size="0" value="{!fixedintervelatHours}">
+                                <apex:selectOption itemLabel="00" itemValue="00"/>
+                                <apex:selectOption itemLabel="01" itemValue="01"/>
+                                <apex:selectOption itemLabel="02" itemValue="02"/>
+                                <apex:selectOption itemLabel="03" itemValue="03"/>
+                                <apex:selectOption itemLabel="04" itemValue="04"/>
+                                <apex:selectOption itemLabel="05" itemValue="05"/>
+                                <apex:selectOption itemLabel="06" itemValue="06"/>
+                                <apex:selectOption itemLabel="07" itemValue="07"/>
+                                <apex:selectOption itemLabel="08" itemValue="08"/>
+                                <apex:selectOption itemLabel="09" itemValue="09"/>
+                                <apex:selectOption itemLabel="10" itemValue="10"/>
+                                <apex:selectOption itemLabel="11" itemValue="11"/>
+                                <apex:selectOption itemLabel="12" itemValue="12"/>
+                                <apex:selectOption itemLabel="13" itemValue="13"/>
+                                <apex:selectOption itemLabel="14" itemValue="14"/>
+                                <apex:selectOption itemLabel="15" itemValue="15"/>
+                                <apex:selectOption itemLabel="16" itemValue="16"/>
+                                <apex:selectOption itemLabel="17" itemValue="17"/>
+                                <apex:selectOption itemLabel="18" itemValue="18"/>
+                                <apex:selectOption itemLabel="19" itemValue="19"/>
+                                <apex:selectOption itemLabel="20" itemValue="20"/>
+                                <apex:selectOption itemLabel="21" itemValue="21"/>
+                                <apex:selectOption itemLabel="22" itemValue="22"/>
+                                <apex:selectOption itemLabel="23" itemValue="23"/>
+                                <apex:selectOption itemLabel="24" itemValue="24"/>
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem id="weekly_id" rendered="{!NOT(intervelOpt)}">
+                            <apex:selectCheckboxes value="{!weeklyDays}">
+                                <apex:selectOption itemLabel="SUN" itemValue="sunday"/>
+                                <apex:selectOption itemLabel="MON" itemValue="monday"/>
+                                <apex:selectOption itemLabel="TUE" itemValue="tuesday"/>
+                                <apex:selectOption itemLabel="WED" itemValue="wednesday"/>
+                                <apex:selectOption itemLabel="THU" itemValue="thursday"/>
+                                <apex:selectOption itemLabel="FRI" itemValue="friday"/>
+                                <apex:selectOption itemLabel="SAT" itemValue="saturday"/>
+                            </apex:selectCheckboxes>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem rendered="{!NOT(intervelOpt)}">
+                            <apex:selectList multiselect="false"  label="Hrs" size="0" value="{!weeklyHours}">
+                                <apex:selectOption itemLabel="00" itemValue="00"/>
+                                <apex:selectOption itemLabel="01" itemValue="01"/>
+                                <apex:selectOption itemLabel="02" itemValue="02"/>
+                                <apex:selectOption itemLabel="03" itemValue="03"/>
+                                <apex:selectOption itemLabel="04" itemValue="04"/>
+                                <apex:selectOption itemLabel="05" itemValue="05"/>
+                                <apex:selectOption itemLabel="06" itemValue="06"/>
+                                <apex:selectOption itemLabel="07" itemValue="07"/>
+                                <apex:selectOption itemLabel="08" itemValue="08"/>
+                                <apex:selectOption itemLabel="09" itemValue="09"/>
+                                <apex:selectOption itemLabel="10" itemValue="10"/>
+                                <apex:selectOption itemLabel="11" itemValue="11"/>
+                                <apex:selectOption itemLabel="12" itemValue="12"/>
+                                <apex:selectOption itemLabel="13" itemValue="13"/>
+                                <apex:selectOption itemLabel="14" itemValue="14"/>
+                                <apex:selectOption itemLabel="15" itemValue="15"/>
+                                <apex:selectOption itemLabel="16" itemValue="16"/>
+                                <apex:selectOption itemLabel="17" itemValue="17"/>
+                                <apex:selectOption itemLabel="18" itemValue="18"/>
+                                <apex:selectOption itemLabel="19" itemValue="19"/>
+                                <apex:selectOption itemLabel="20" itemValue="20"/>
+                                <apex:selectOption itemLabel="21" itemValue="21"/>
+                                <apex:selectOption itemLabel="22" itemValue="22"/>
+                                <apex:selectOption itemLabel="23" itemValue="23"/>
+                                <apex:selectOption itemLabel="24" itemValue="24"/>
+                            </apex:selectList>
+                            <apex:selectList multiselect="false" label="Mins" size="0" value="{!weeklymints}">
+                                <apex:selectOption itemLabel="00" itemValue="00"/>
+                                <apex:selectOption itemLabel="15" itemValue="15"/>
+                                <apex:selectOption itemLabel="30" itemValue="30"/>
+                                <apex:selectOption itemLabel="45" itemValue="45"/>
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection collapsible="true" title="E-Mail Notification Addresses (CSV)" columns="1">
+                        <apex:inputText label="Sender Address" value="{!senderAddress}" size="100"/>
+                        <apex:inputTextarea label="To Addresses" value="{!toAddresses}" style="width:632px;height:50px"/>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection >
+                        <apex:commandButton value="Save" action="{!saveProjectBuild}" style="position:relative;float:right;" reRender="msgDiv"/> 
+                        <apex:commandButton value="Cancel" action="{!cancelProjectCreation}" style="position:relative;float:left;"/> 
+                    </apex:pageBlockSection>
+                </apex:tab>
+
+                <apex:tab label="Components" name="Components" id="Components_tab">
+                    <apex:pageBlockSection title="Components Details" columns="1">
+                        <apex:inputText label="Project Name" value="{!name}" size="40" disabled="true"/>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Create Components" columns="1">   
+                        <apex:pageBlockSectionItem >
+                            <apex:commandButton style="position:relative;float:right;" action="{!AddComponent}" image="{!URLFOR($Resource.StaticResource, 'StaticResources/images/add.gif')}" reRender="pb1"/>
+                            <apex:commandButton style="position:relative;float:left;" action="{!DeleteComponent}" image="{!URLFOR($Resource.StaticResource, 'StaticResources/images/cross1.png')}" reRender="pb1"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputPanel id="pb1">
+                                <apex:pageBlockTable style="float:left;" value="{!lstComponent}"  var="comp" >
+                                    <apex:column >
+                                        <apex:inputCheckbox value="{!comp.ComponentFlag}" />
+                                    </apex:column>
+                                    <apex:column headerValue="Component Name">
+                                        <apex:inputtext size="40" value="{!comp.ComponentName}" />
+                                    </apex:column> 
+                                </apex:pageBlockTable>
+                            </apex:outputPanel> 
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection >
+                        <apex:commandButton style="position:relative;float:right;" action="{!SaveComponent}" value="Save" reRender="comp,msgDiv"/>
+                        <apex:commandButton value="Cancel" action="{!cancelProjectCreation}" style="position:relative;float:left;"/> 
+                    </apex:pageBlockSection>
+                </apex:tab>
+
+                <apex:tab label="TestCases" name="TestCases" id="TestCases_tab">
+                    <apex:pageBlockSection columns="2" title="Test Cases Details" id="comp">
+                        <apex:inputText label="Project Name" value="{!name}" size="40" disabled="true"/>
+                        <apex:selectList multiselect="false" value="{!Selected_comp}" size="1" onchange="showTestCaseDiv()" label="Component Name">
+                            <apex:selectOptions value="{!componentsList}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSection>
+                    <apex:outputPanel id="testtypes">
+                        <apex:pageBlockSection title="Test Types" columns="2">
+                            <apex:inputCheckBox value="{!codeCover}" label="Apex Code Coverage"/>
+                            <apex:inputCheckBox value="{!selenium}" label="Selenium" onclick="showTestCaseDiv()"/>
+                        </apex:pageBlockSection>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="testdiv">
+                        <apex:pageBlockSection columns="2" title="{!selected_comp}" rendered="{!testDiv}">
+                            <apex:inputTextarea label="Platinum Cases" value="{!platinum}" rows="3" cols="70"/>
+                            <apex:inputTextarea label="Gold Cases" value="{!gold}" rows="3" cols="70"/>
+                            <apex:inputTextarea label="Silver Cases" value="{!silver}" rows="3" cols="70"/>
+                            <apex:inputTextarea label="Bronze Cases" value="{!bronze}" rows="3" cols="70"/>
+                        </apex:pageBlockSection>
+                    </apex:outputPanel>
+                    <apex:pageBlockSection >
+                        <apex:commandButton value="Save" action="{!saveProjectTestCases}" style="position:relative;float:right;" reRender="msgDiv"/> 
+                        <apex:commandButton value="Cancel" action="{!cancelProjectCreation}" style="position:relative;float:left;"/>  
+                    </apex:pageBlockSection>
+                </apex:tab>
+                <apex:tab label="Jira" name="Jira" rendered="{!projectMgmtSystem}" id="J">
+                    <apex:pageBlockSection title="Jira Login Credentials" columns="2">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel >Install IP</apex:outputLabel>
+                            <apex:outputPanel layout="block" styleClass="requiredInput">
+                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                <apex:inputText value="{!jiraIp}" size="40" disabled="{NOT{!jiraBtnStatus}}"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel >HTTP Port</apex:outputLabel>
+                            <apex:outputPanel layout="block" styleClass="requiredInput">
+                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                <apex:inputText value="{!jiraPort}" size="40" disabled="{NOT{!jiraBtnStatus}}"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel >UserName</apex:outputLabel>
+                            <apex:outputPanel layout="block" styleClass="requiredInput">
+                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                <apex:inputText value="{!jiraUserName}" size="40" disabled="{NOT{!jiraBtnStatus}}"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel >Password</apex:outputLabel>
+                            <apex:outputPanel layout="block" styleClass="requiredInput">
+                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                <apex:inputText value="{!jiraPassword}" size="40" disabled="{NOT{!jiraBtnStatus}}"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:commandButton value="Test Connection" action="{!verifyJiraCredentials}" style="position:relative;float:right;" rendered="{!jiraBtnStatus}"/> 
+                        <apex:commandButton value="  Save  " action="{!saveJiraCredentials}" style="position:relative;float:left;" rendered="{!jiraBtnStatus}"/>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Projects Mapping" columns="2" rendered="{!jiraFldStatus}">
+                        <apex:inputText label="Project Name" value="{!name}" size="40" disabled="true"/>
+                        <apex:selectList label="Jira Projects" value="{!jiraSelProject}" size="1" multiselect="false" onchange="getComp()">
+                            <apex:selectOptions value="{!jiraprojectList}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSection>
+                    <apex:outputPanel id="jiracomponents">
+                        <apex:pageBlockSection title="Components Mapping" rendered="{!jiracompStatus}">
+                            <apex:pageBlockTable style="width: 1218px;" value="{!jiraComponents}" var="jiracomp" >
+                                <apex:column headerValue="Rabit Components">
+                                    <apex:outputText value="{!jiracomp.ComponentName}"/>
+                                </apex:column>
+                                <apex:column headerValue="Jira Components">
+                                    <apex:selectList value="{!jiracomp.mappedComp}" size="1" multiselect="false">
+                                        <apex:selectOptions value="{!jiracomp.componentsListJira}"/>
+                                    </apex:selectList>
+                                </apex:column>
+                            </apex:pageBlockTable>
+                        </apex:pageBlockSection>
+                    </apex:outputPanel>
+                    <apex:pageBlockSection >
+                        <apex:commandButton value="Save" action="{!saveJiraConfiguration}" style="position:relative;float:right;" rendered="{!jiraFldStatus}" reRender="msgDiv"/> 
+                        <apex:commandButton value="Cancel" action="{!cancelProjectCreation}" style="position:relative;float:left;" rendered="{!jiraFldStatus}"/> 
+                    </apex:pageBlockSection>
+                </apex:tab>
+            </apex:tabPanel>
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>

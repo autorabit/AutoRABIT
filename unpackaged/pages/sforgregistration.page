@@ -1,0 +1,75 @@
+<apex:page sidebar="false" tabStyle="Account" action="{!onLoadSforgReg}" controller="sforgRegController"  label="Salesforce Organization Registration" >
+    <apex:pageMessages id="msgDiv" rendered="true"/>
+    <script type="text/javascript" language="javascript"> 
+        function getChangedUrlVal(){
+            urlVal();
+        } 
+    </script>
+    <apex:form >
+        <apex:actionFunction action="{!getUrlVale}" name="urlVal" reRender="url_id"/>
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Salesforce Organization Details">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel style="margin-align:right;"> Name </apex:outputLabel>
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                        <apex:inputText value="{!sforgName}" size="40"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:selectList multiselect="false" size="0" label="Organization Type" value="{!sforgType}" >
+                    <apex:selectOption itemLabel="Dev" itemValue="Dev"/>
+                    <apex:selectOption itemLabel="Integration" itemValue="Integration"/>
+                    <apex:selectOption itemLabel="QA" itemValue="QA"/>
+                    <apex:selectOption itemLabel="Production" itemValue="Production"/>
+                </apex:selectList>
+                <apex:selectList multiselect="false" size="0" label="Environment" value="{!environment}" onchange="getChangedUrlVal()">
+                    <apex:selectOption itemLabel="Production or Development Edition" itemValue="https://login.salesforce.com"/>
+                    <apex:selectOption itemLabel="Sandbox" itemValue="https://test.salesforce.com"/>
+                    <apex:selectOption itemLabel="Pre-Release" itemValue="https://prerellogin.pre.salesforce.com"/>
+                </apex:selectList>
+                <apex:inputText label="URL" value="{!url}" size="40" disabled="true" id="url_id"/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >User Name</apex:outputLabel>
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                        <apex:inputText value="{!sforgUName}" size="40"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Password</apex:outputLabel>
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                        <apex:inputText value="{!sforgPassword}" size="40"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Security Token</apex:outputLabel>
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                        <apex:inputText value="{!sforgStoken}" size="40"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Package Name</apex:outputLabel>
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                        <apex:inputText value="{!sforgPckgName}" size="40"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <table style="margin-left:43%;">
+                <tr>
+                    <td>
+                        <apex:commandButton value="Test Connection" action="{!verifySFCredentials}" reRender="msgDiv"/> 
+                    </td>
+                    <td>
+                        <apex:commandButton value="Save" action="{!saveSfOrgReg}"/>  
+                    </td>
+                    <td>
+                        <apex:commandButton value="Cancel" action="{!cancelSfOrgReg}"/> 
+                    </td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

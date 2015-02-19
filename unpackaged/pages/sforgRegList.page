@@ -1,0 +1,30 @@
+<apex:page title="Salesforce Organization Home" controller="SalesforceOrganizationListController" action="{!getRegisterdSfOrgList}" tabStyle="Account" sidebar="false">
+    <apex:pageMessages id="msgDiv" rendered="true"/>
+    <apex:form >
+        <apex:pageBlock title="Registered Salesforce Organizations">
+            <apex:pageBlockButtons location="top" style="text-align:right;">
+                <apex:commandButton value="Register Salesforce Organization" action="{!ShowSalesforceOrganizationRegisterPage}"/>
+                <apex:commandButton value="Delete" action="{!deleteSfOrgSandbox}" reRender="msgDiv,SfOrgListId"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable width="100%" value="{!sforgRegList}" var="sforg" id="SfOrgListId">
+                <apex:column headerValue="" width="5%">
+                    <apex:inputCheckbox value="{!sforg.deleteFlag}" />
+                </apex:column>
+                <apex:column headerValue="Salesforce Organization Name" width="25%" >
+                    <apex:commandLink value="{!sforg.name}" action="{!showSfOrgDetails}">
+                        <apex:param name="id" value="{!sforg.guid}" assignTo="{!sforgParam}"/>
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column headerValue="Organization Type" width="22%">
+                    <apex:outputText value="{!sforg.orgType}"/>
+                </apex:column>
+                <apex:column headerValue="Organization URL" width="22%">
+                    <apex:outputText value="{!sforg.url}"/>
+                </apex:column>
+                <apex:column headerValue="User Name" width="24%">
+                    <apex:outputText value="{!sforg.userName}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

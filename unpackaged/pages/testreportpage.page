@@ -1,0 +1,83 @@
+<apex:page sidebar="false" showHeader="true" tabStyle="Account" showChat="false" action="{!onloadTestReportPage}" controller="TestReportPageController">
+    <style>
+       .activeTab {background-color: #236FBD; color:white;font-size:12px;padding:4px 20px; cursor:pointer;border:1px #009cec solid;outline:none; background-image:none}
+       .inactiveTab {background-color: lightgrey; color:black;font-size:12px;padding:4px 20px; cursor:pointer;border:1px #ccc solid;outline:none; background-image:none}
+    </style>
+    <apex:form >
+        <apex:pageBlock >
+              <apex:pageBlockSection collapsible="true">
+                  <apex:outputText label="Project Name :" value="{!projectName}"/>
+                  <apex:outputText label="Build Number :" value="{!buildNo}"/>
+               </apex:pageBlockSection>   
+               <apex:pageBlockSection collapsible="true" title="Test Result Summary" columns="1"> 
+                <apex:pageBlockTable value="{!testResultList}" width="100%" var="test" title="Tests Summary" cellPadding="4" border="1">
+                      <apex:column width="25%">
+                          <apex:facet name="header">Total Tests</apex:facet>
+                            {!test.tr_totalTest}
+                      </apex:column>
+                       <apex:column width="25%">
+                            <apex:facet name="header">Success Tests</apex:facet>
+                            {!test.tr_sucessTest}
+                      </apex:column>
+                       <apex:column width="25%">
+                       <apex:facet name="header">Failure Tests</apex:facet>
+                            {!test.tr_failureTest}
+                      </apex:column>
+                       <apex:column width="25%">
+                       <apex:facet name="header">Error Tests</apex:facet>
+                            {!test.tr_ErrorTest}
+                      </apex:column>
+                  </apex:pageBlockTable>
+              </apex:pageBlockSection>   
+            <apex:pageBlockSection collapsible="true" title="Test Execution Details" columns="1"> 
+              <apex:tabPanel switchType="client" selectedTab="Success_tab" id="AccountTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab">
+                  <apex:tab label="Success" name="Success" id="Success_tab">
+                     <apex:pageBlockTable width="100%" value="{!successTestList}" var="stest">
+                         <apex:column headerValue="Component Name" width="25%">
+                                <apex:outputText value="{!stest.componentName}"/>
+                          </apex:column>
+                          <apex:column headerValue="Package Name" width="50%">
+                                <apex:outputText value="{!stest.packageName}"/>
+                          </apex:column>
+                           <apex:column headerValue="TestCase Name" width="50%">
+                                <apex:outputText value="{!stest.testCaseName}"/>
+                          </apex:column>
+                     </apex:pageBlockTable> 
+                  </apex:tab>
+                  <apex:tab label="Failures" name="Failures" id="Failures_tab">
+                      <apex:pageBlockTable width="100%" value="{!failuresTestList}" var="ftest">
+                          <apex:column headerValue="Component Name" width="25%">
+                                <apex:outputText value="{!ftest.componentName}"/>
+                          </apex:column>
+                          <apex:column headerValue="Package Name" width="25%">
+                                <apex:outputText value="{!ftest.packageName}"/>
+                          </apex:column>
+                           <apex:column headerValue="TestCase Name" width="25%">
+                                <apex:outputText value="{!ftest.testCaseName}"/>
+                          </apex:column>
+                           <apex:column headerValue="Failure Detail" width="50%">
+                                <apex:outputText value="{!ftest.details}"/>
+                          </apex:column>
+                      </apex:pageBlockTable>
+                  </apex:tab>
+                  <apex:tab label="Errors" name="Errors" id="Errors_tab">
+                      <apex:pageBlockTable width="100%" value="{!errorTestList}" var="etest">
+                         <apex:column headerValue="Component Name" width="25%">
+                                <apex:outputText value="{!etest.componentName}"/>
+                          </apex:column>
+                          <apex:column headerValue="Package Name" width="50%">
+                                <apex:outputText value="{!etest.packageName}"/>
+                          </apex:column>
+                           <apex:column headerValue="TestCase Name" width="50%">
+                                <apex:outputText value="{!etest.testCaseName}"/>
+                          </apex:column>
+                          <apex:column headerValue="Error Detail" width="50%">
+                                <apex:outputText value="{!etest.details}"/>
+                          </apex:column>
+                     </apex:pageBlockTable> 
+                  </apex:tab>
+              </apex:tabPanel>
+           </apex:pageBlockSection>     
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

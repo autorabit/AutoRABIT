@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Autorabit</fullName>
+        <categories>Release Management</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Autorabit</shortDescription>
+        <value>RABIT – Rapid Accelerated/Actionable Build Install Test. AutoRABIT is a cloud-based release management suite for Salesforce-based applications. It enables automated deployment, sandbox management, end-to-end release management, defect tracking, and automated testing available in public and private Clouds.</value>
+    </labels>
+    <labels>
+        <fullName>TestLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for test</shortDescription>
+        <value>123</value>
+    </labels>
+    <labels>
+        <fullName>UnpackagedLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UnpackagedLabel</shortDescription>
+        <value>ddfgdgfdg</value>
+    </labels>
+</CustomLabels>

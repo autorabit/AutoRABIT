@@ -1,0 +1,48 @@
+<apex:page controller="TransferDataPageController" action="{!onLoadTransferPage}" sidebar="false"> 
+<apex:form >  
+<apex:pageBlock >
+ <div style="width:100%;height:30px;background: linear-gradient(#d7d7d7, #ffffff, #d7d7d7);">
+   <apex:outputText value="Selected Object : " style="font-weight:bold;font-size:15px;margin-left:20px;padding-top:10px;"/>
+   <apex:outputText style="margin-left:10px;width:50px;" value="{!selectedObj}"/>
+    <apex:commandButton value="Logout" action="{!logoutFrmSf}" style="float:right;margin-right:0px;width:90px;height:29px;font-size:13px;color:white;background: linear-gradient(#1a80c2, #16aae5);" immediate="true"/> 
+</div>
+    <table>
+        <tr>
+            <td valign="top">     
+                <div style="width:300px;height:30px;color:white;background: linear-gradient(#1a80c2, #16aae5);overflow:auto;border: 1px solid #1a80c2;">
+                    <br/><apex:outputText value="Result" style="margin-left:10px;width:150px;"/>
+                </div>
+                <div id="div4" style="width:300px;height:50px;border: 1px solid #1a80c2;color:blue;background-color:#ffffff;overflow:auto;">
+                     <apex:pageBlockTable width="100%" value="{!transferdResList}" var="trRes" id="filtersId">
+                        <apex:column headerValue="Object" width="40%">
+                            <apex:outputText value="{!trRes.sfObjectName}" />
+                        </apex:column>
+                        <apex:column headerValue="Total" width="20%">
+                            <apex:outputText value="{!trRes.tCount}"/>
+                        </apex:column>
+                        <apex:column headerValue="Sucess" width="20%">
+                            <apex:outputText value="{!trRes.sCount}"/>
+                        </apex:column>
+                        <apex:column headerValue="Error" width="20%">
+                            <apex:outputText value="{!trRes.eCount}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>                             
+                </div>      
+            </td>
+            <td>           
+                <div style="width:979px;height:30px;color:white;background: linear-gradient(#1a80c2, #16aae5);">
+                    <br/><apex:outputText value="Sucess/Error Records" style="margin-left:10px;"/>
+                </div>
+            
+                <div id="div4" style="width:977px;height:402px;border: 1px solid #1a80c2;color:white;background-color:#ffffff;overflow:auto;">
+                     
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div style="width:100%;height:30px;background: linear-gradient(#d7d7d7, #ffffff, #d7d7d7);text-align:right;">
+            <apex:commandButton value="Finish" action="{!goToSfObjPage}" style="margin-left:0px;; width: 90px; height: 29px; font-size: 13px; color: white; background: linear-gradient(rgb(26, 128, 194), rgb(22, 170, 229)) repeat scroll 0% 0% transparent;" immediate="true"/> 
+       </div>
+  </apex:pageBlock>  
+  </apex:form>
+</apex:page>

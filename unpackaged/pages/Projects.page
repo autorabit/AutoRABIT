@@ -1,0 +1,30 @@
+<apex:page title="Projects Home" controller="ProjectsListofControler" action="{!onLoadProjects}" tabStyle="Account" sidebar="false">
+    <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" />
+    <style>
+        a:link {text-decoration:none;color:blue;}
+        a:visited {text-decoration:none;}
+        a:hover {text-decoration:underline;}
+        a:active {text-decoration:underline;}
+    </style>
+    <link rel="stylesheet" type="text/css" href="../styles/default.css" />
+    <apex:stylesheet value="{!URLFOR($Resource.StaticResource, 'StaticResources/styles/default.css')}" />
+    <apex:form >
+        <apex:sectionHeader title="Projects Home" />
+        <apex:pageBlock title="Recent Projects">
+            <apex:pageBlockButtons location="top" style="text-align:right;">
+                <apex:commandButton alt="New Project" id="NewProject" value=" Create New Project " action="{!ShowNewPage}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable width="100%" value="{!projects}" var="project">
+                <apex:column headerValue="Project Name" width="50%" >
+                    <apex:commandLink value="{!project.name}" action="{!ShowProjectDetails}">
+                        <apex:param name="id" value="{!project.name}" assignTo="{!projectParam}"/>
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column headerValue="Is Active" width="50%">
+                    <apex:image url="{!URLFOR($Resource.StaticResource, 'StaticResources/images/inactive.png')}" rendered="{NOT{!project.isActive}}"/>
+                    <apex:image url="{!URLFOR($Resource.StaticResource, 'StaticResources/images/active.png')}" rendered="{!project.isActive}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

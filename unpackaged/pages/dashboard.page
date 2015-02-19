@@ -1,0 +1,189 @@
+<apex:page controller="DashboadController" sidebar="false" action="{!onloadProjectDashBoard}" tabStyle="Account">
+    <apex:form >
+        <script>
+            gaugeChart.on('beforeconfig', function(config) {
+                config.axes[0].margin=-1;
+            });
+        </script>
+        <html>
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="2" collapsible="true" title="Windows Regression Test Summary">
+                    <apex:chart name="gaugeChart" height="300" width="450" animate="true" data="{!gaugeDataDash}" >
+                        <apex:axis type="Gauge" position="gauge" title="Sucess Rate" gridFill="true" minimum="0" maximum="100" steps="1" grid="true" />
+                        <apex:gaugeSeries dataField="size" donut="75" colorSet="#78c953,#ddd"  highlight="true"/>
+                    </apex:chart>
+
+                    <apex:chart height="300" width="400" data="{!lineChartDataDash }" >
+                        <apex:axis type="Numeric" position="left" fields="sucessRate" title="Sucess Rate of TestCases" grid="true"/>
+                        <apex:axis type="Numeric" position="bottom" fields="buildNo" title="Build Numbers"/>
+                        <apex:lineSeries axis="left" fill="false" xField="buildNo" yField="sucessRate" markerType="circle" markerSize="4" markerFill="#FF0000" />
+                    </apex:chart> 
+                </apex:pageBlockSection>
+                <apex:pageBlockSection collapsible="true" title="Project Management" columns="1">
+                    <apex:outputText >
+                        <u>
+                            <b>Issues Summary</b>
+                        </u>
+                    </apex:outputText>
+                    <apex:pageBlockTable value="{!jiraIssueLst}" var="jiLst" headerClass="headerStyle" width="100%"> 
+                        <apex:column headerValue="Total Issues">
+                            <apex:outputText value="{!jiLst.totissues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Open Issues">
+                            <apex:outputText value="{!jiLst.openIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Inprogress Issues">
+                            <apex:outputText value="{!jiLst.InprogressIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Closed Issues">
+                            <apex:outputText value="{!jiLst.closedIssues}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>    
+                <apex:pageBlockSection collapsible="true">
+                    <apex:outputText >
+                        <u>
+                            <b>Open Issues ( Based on Priority )</b>
+                        </u>
+                    </apex:outputText>
+                    <apex:outputText >
+                        <u>
+                            <b>Open Issues ( Based on Type )</b>
+                        </u>
+                    </apex:outputText>
+                    <apex:pageBlockTable value="{!jiraIssueLst}" var="jiLst" title="open" headerClass="headerStyle">
+                        <apex:column headerValue="Blocker">
+                            <apex:outputText value="{!jiLst.openBlockerIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Critical">
+                            <apex:outputText value="{!jiLst.openCriticalIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Major">
+                            <apex:outputText value="{!jiLst.openMajorIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Minor">
+                            <apex:outputText value="{!jiLst.openMinorIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Trivial">
+                            <apex:outputText value="{!jiLst.openTrivialIssues}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:pageBlockTable value="{!jiraIssueLst}" var="jiLst" headerClass="headerStyle">
+                        <apex:column headerValue="Bug">
+                            <apex:outputText value="{!jiLst.openBugIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="New Feature">
+                            <apex:outputText value="{!jiLst.openNewfeatureIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Task">
+                            <apex:outputText value="{!jiLst.openTaskIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Improvment">
+                            <apex:outputText value="{!jiLst.openImprovmentIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Epic">
+                            <apex:outputText value="{!jiLst.openEpicIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Story">
+                            <apex:outputText value="{!jiLst.openStoryIssues}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:outputText >
+                        <u>
+                            <b>Inprogress Issues ( Based on Priority )</b>
+                        </u>
+                    </apex:outputText>
+                    <apex:outputText >
+                        <u>
+                            <b>Inprogress Issues ( Based on Type )</b>
+                        </u>
+                    </apex:outputText>
+                    <apex:pageBlockTable value="{!jiraIssueLst}" var="jiLst" title="open" headerClass="headerStyle">
+                        <apex:column headerValue="Blocker">
+                            <apex:outputText value="{!jiLst.inProgressBlockerIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Critical">
+                            <apex:outputText value="{!jiLst.inProgressCriticalIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Major">
+                            <apex:outputText value="{!jiLst.inProgressMajorIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Minor">
+                            <apex:outputText value="{!jiLst.inProgressMinorIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Trivial">
+                            <apex:outputText value="{!jiLst.inProgressTrivialIssues}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:pageBlockTable value="{!jiraIssueLst}" var="jiLst" headerClass="headerStyle">
+                        <apex:column headerValue="Bug">
+                            <apex:outputText value="{!jiLst.inProgressBugIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="New Feature">
+                            <apex:outputText value="{!jiLst.inProgressNewfeatureIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Task">
+                            <apex:outputText value="{!jiLst.inProgressTaskIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Improvment">
+                            <apex:outputText value="{!jiLst.inProgressImprovmentIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Epic">
+                            <apex:outputText value="{!jiLst.inProgressEpicIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Story">
+                            <apex:outputText value="{!jiLst.inProgressStoryIssues}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:outputText >
+                        <u>
+                            <b>Closed Issues ( Based on Priority )</b>
+                        </u>
+                    </apex:outputText>
+                    <apex:outputText >
+                        <u>
+                            <b>Closed Issues ( Based on Type )</b>
+                        </u>
+                    </apex:outputText>
+                    <apex:pageBlockTable value="{!jiraIssueLst}" var="jiLst" title="open" headerClass="headerStyle">
+                        <apex:column headerValue="Blocker">
+                            <apex:outputText value="{!jiLst.closedBlockerIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Critical">
+                            <apex:outputText value="{!jiLst.closedCriticalIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Major">
+                            <apex:outputText value="{!jiLst.closedMajorIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Minor">
+                            <apex:outputText value="{!jiLst.closedMinorIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Trivial">
+                            <apex:outputText value="{!jiLst.closedTrivialIssues}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:pageBlockTable value="{!jiraIssueLst}" var="jiLst" headerClass="headerStyle">
+                        <apex:column headerValue="Bug">
+                            <apex:outputText value="{!jiLst.closedBugIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="New Feature">
+                            <apex:outputText value="{!jiLst.closedNewfeatureIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Task">
+                            <apex:outputText value="{!jiLst.closedTaskIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Improvment">
+                            <apex:outputText value="{!jiLst.closedImprovmentIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Epic">
+                            <apex:outputText value="{!jiLst.closedEpicIssues}"/>
+                        </apex:column>
+                        <apex:column headerValue="Story">
+                            <apex:outputText value="{!jiLst.closedStoryIssues}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </html>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,36 @@
+<apex:page title="New Project" controller="TestParamController" tabStyle="Account" action="{!onLoadController}" sidebar="false">
+    <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" />
+    <apex:pageMessages rendered="true"/>
+    <apex:sectionHeader title="Create Project" /> 
+    <apex:form > 
+        <apex:pageBlock title="New Project">
+            <apex:pageBlockButtons style="padding-left: 212px;" location="top">
+                <apex:commandButton value="Save" action="{!createProject}" reRender=""/> 
+                <apex:commandButton value="Cancel" action="{!cancelProjectCreation}"/> 
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockButtons style="padding-left: 212px;" location="bottom"> 
+                <apex:commandButton value="Save" action="{!createProject}" reRender=""/> 
+                <apex:commandButton value="Cancel" action="{!cancelProjectCreation}"/> 
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection collapsible="true" title="Project Information" columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Project Name</apex:outputLabel>
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                        <apex:inputText value="{!name}" rendered="true"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:inputText label="No. of builds to be shown" value="{!noOfShownBuilds}"/> 
+                <apex:inputcheckbox label="Is Active" value="{!isActive}" />
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection collapsible="true" title="Integrations" columns="2"> 
+                <apex:inputcheckbox label="Defect Tracker (Bugzilla)" id="defectTracker_id" value="{!defectTracker}" rendered="false"/> 
+                <apex:inputcheckbox label="Testcase Management System (Test Link)" id="testlink_id" value="{!testCaseMgmtSystem}" rendered="false"/> 
+                <apex:inputcheckbox label="Project Management System (Jira)" id="jira_id" value="{!projectMgmtSystem}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>

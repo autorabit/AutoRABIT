@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Region</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Region</value>
+    </caseValues>
+    <fields>
+        <label>ciudad</label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label>país</label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label>población</label>
+        <name>Population__c</name>
+    </fields>
+    <fields>
+        <label>código Postal</label>
+        <name>Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label>estado</label>
+        <name>State_Province__c</name>
+    </fields>
+    <fields>
+        <label><!-- infoEx_Id --></label>
+        <name>infoEx_Id__c</name>
+    </fields>
+    <layouts>
+        <layout>Area Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label><!-- For Non Region Users --></label>
+        <name>For_Non_Region_Users</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
