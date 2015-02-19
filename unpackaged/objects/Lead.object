@@ -72,6 +72,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+<<<<<<< HEAD
     <businessProcesses>
         <fullName>LeadSrcTest</fullName>
         <isActive>true</isActive>
@@ -92,6 +93,8 @@
             <default>false</default>
         </values>
     </businessProcesses>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
@@ -108,10 +111,39 @@
         <type>Lookup</type>
     </fields>
     <fields>
+<<<<<<< HEAD
+=======
+        <fullName>CleanStatus</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <fullName>Company</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+<<<<<<< HEAD
+=======
+        <fullName>CompanyDunsNumber</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>CurrentGenerators__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Generator(s)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DandbCompanyId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <fullName>Description</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -235,10 +267,13 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Other</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <fullName>Recreation</fullName>
                 <default>false</default>
             </picklistValues>
@@ -266,6 +301,13 @@
                 <fullName>Utilities</fullName>
                 <default>false</default>
             </picklistValues>
+<<<<<<< HEAD
+=======
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             <sorted>false</sorted>
         </picklist>
         <trackFeedHistory>false</trackFeedHistory>
@@ -282,6 +324,7 @@
         <fullName>LeadSource</fullName>
         <picklist>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Advertisement</fullName>
                 <default>false</default>
             </picklistValues>
@@ -314,10 +357,13 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <fullName>Web</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Word of mouth</fullName>
                 <default>false</default>
             </picklistValues>
@@ -335,6 +381,21 @@
             </picklistValues>
             <picklistValues>
                 <fullName>test3</fullName>
+=======
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -355,17 +416,76 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+<<<<<<< HEAD
+=======
+        <fullName>NumberofLocations__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Locations</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <fullName>OwnerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
+<<<<<<< HEAD
         <fullName>PartnerAccountId</fullName>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Phone</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+=======
+        <fullName>Phone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Primary__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProductInterest__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Interest</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GC1000 series</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GC5000 series</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GC3000 series</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fields>
     <fields>
         <fullName>Rating</fullName>
@@ -388,6 +508,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
+<<<<<<< HEAD
         <fullName>Status</fullName>
         <picklist>
             <picklistValues>
@@ -402,11 +523,41 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Qualified</fullName>
+=======
+        <fullName>SICCode__c</fullName>
+        <externalId>false</externalId>
+        <label>SIC Code</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Open - Not Contacted</fullName>
+                <converted>false</converted>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Working - Contacted</fullName>
+                <converted>false</converted>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed - Converted</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <converted>true</converted>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Unqualified</fullName>
+=======
+                <fullName>Closed - Not Converted</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <converted>false</converted>
                 <default>false</default>
             </picklistValues>
@@ -423,6 +574,7 @@
         <fullName>Website</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
+<<<<<<< HEAD
     <fields>
         <fullName>helloexternalId__c</fullName>
         <description>External Id created by Rabit</description>
@@ -482,10 +634,20 @@
             <field>LEAD.STATUS</field>
             <operation>notEqual</operation>
             <value>Qualified</value>
+=======
+    <listViews>
+        <fullName>AllOpenLeads</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>notContain</operation>
+            <value>closed</value>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         </filters>
         <label>All Open Leads</label>
     </listViews>
     <listViews>
+<<<<<<< HEAD
         <fullName>LeadQueue_Lead</fullName>
         <filterScope>Queue</filterScope>
         <label>LeadQueue</label>
@@ -504,6 +666,9 @@
         <columns>LEAD.RATING</columns>
         <columns>LEAD.UNREAD</columns>
         <columns>LEAD.STATUS</columns>
+=======
+        <fullName>MyUnreadLeads</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <filterScope>Mine</filterScope>
         <filters>
             <field>LEAD.UNREAD</field>
@@ -514,6 +679,19 @@
     </listViews>
     <listViews>
         <fullName>TodaysLeads</fullName>
+<<<<<<< HEAD
+=======
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today&apos;s Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>ViewCustom1</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <columns>FULL_NAME</columns>
         <columns>LEAD.COMPANY</columns>
         <columns>LEAD.STATE</columns>
@@ -523,6 +701,7 @@
         <columns>CORE.USERS.ALIAS</columns>
         <columns>LEAD.UNREAD</columns>
         <filterScope>Everything</filterScope>
+<<<<<<< HEAD
         <filters>
             <field>LEAD.CREATED_DATE</field>
             <operation>equals</operation>
@@ -753,6 +932,24 @@
             </values>
         </picklistValues>
     </recordTypes>
+=======
+        <label>View - Custom 1</label>
+    </listViews>
+    <listViews>
+        <fullName>ViewCustom2</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.STATE</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LEAD.UNREAD</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <filterScope>Everything</filterScope>
+        <label>View - Custom 2</label>
+    </listViews>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <searchLayouts>
         <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>LEAD.COMPANY</customTabListAdditionalFields>
@@ -772,6 +969,7 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWriteTransfer</sharingModel>
+<<<<<<< HEAD
     <webLinks>
         <fullName>AltavistaNews</fullName>
         <availability>online</availability>
@@ -905,4 +1103,6 @@
         <showsStatus>true</showsStatus>
         <url>http://maps.yahoo.com/py/maps.py?cn={!Lead_Country}&amp;csz={!Lead_City}+{!Lead_State}+{!Lead_PostalCode}+&amp;addr={!Lead_Address}</url>
     </webLinks>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
 </CustomObject>

@@ -47,7 +47,10 @@
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
         <editHeading>true</editHeading>
+<<<<<<< HEAD
         <label>System Information</label>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -66,7 +69,10 @@
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
+<<<<<<< HEAD
         <label>Description Information</label>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -84,12 +90,21 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+<<<<<<< HEAD
     <multilineLayoutFields>OpportunityId</multilineLayoutFields>
     <multilineLayoutFields>UnitPrice</multilineLayoutFields>
     <multilineLayoutFields>Product2Id</multilineLayoutFields>
     <multilineLayoutFields>Quantity</multilineLayoutFields>
     <multilineLayoutFields>ServiceDate</multilineLayoutFields>
     <multilineLayoutFields>Description</multilineLayoutFields>
+=======
+    <multilineLayoutFields>Product2Id</multilineLayoutFields>
+    <multilineLayoutFields>Quantity</multilineLayoutFields>
+    <multilineLayoutFields>UnitPrice</multilineLayoutFields>
+    <multilineLayoutFields>ServiceDate</multilineLayoutFields>
+    <multilineLayoutFields>Description</multilineLayoutFields>
+    <multilineLayoutFields>OpportunityId</multilineLayoutFields>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <showEmailCheckbox>false</showEmailCheckbox>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>

@@ -51,6 +51,7 @@
         </filters>
         <label>Last 7 Days</label>
     </listViews>
+<<<<<<< HEAD
     <listViews>
         <fullName>Ideas_Last_7_Days</fullName>
         <columns>IDEA.CREATED_DATE</columns>
@@ -69,6 +70,8 @@
         </filters>
         <label>Last 7 Days</label>
     </listViews>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <recordTypes>
         <fullName>InternalIdeasIdeaRecordType</fullName>
         <active>true</active>

@@ -120,6 +120,14 @@
         <type>Lookup</type>
     </fields>
     <fields>
+<<<<<<< HEAD
+=======
+        <fullName>Pricebook2Id</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <fullName>ShippingAddress</fullName>
         <trackHistory>true</trackHistory>
     </fields>
@@ -152,6 +160,7 @@
         <trackHistory>true</trackHistory>
         <type>Picklist</type>
     </fields>
+<<<<<<< HEAD
     <fields>
         <fullName>helloexternalId__c</fullName>
         <description>External Id created by Rabit</description>
@@ -196,6 +205,8 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <listViews>
         <fullName>AllActivatedContracts</fullName>
         <filterScope>Everything</filterScope>

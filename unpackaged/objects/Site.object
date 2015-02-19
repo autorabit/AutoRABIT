@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+<<<<<<< HEAD
     <enableFeeds>false</enableFeeds>
+=======
+    <enableFeeds>true</enableFeeds>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
 </CustomObject>

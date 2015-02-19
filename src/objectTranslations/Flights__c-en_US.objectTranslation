@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Flight</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Flights</value>
+    </caseValues>
+    <fields>
+        <label><!-- Adults --></label>
+        <name>Adults__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Childrens --></label>
+        <name>Childrens__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Departing --></label>
+        <name>Departing__c</name>
+    </fields>
+    <fields>
+        <label><!-- From --></label>
+        <name>From__c</name>
+        <picklistValues>
+            <masterLabel>Bloomington</masterLabel>
+            <translation><!-- Bloomington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brooklyn Park</masterLabel>
+            <translation><!-- Brooklyn Park --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lakeville</masterLabel>
+            <translation><!-- Lakeville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles</masterLabel>
+            <translation><!-- Los Angeles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minneapolis</masterLabel>
+            <translation><!-- Minneapolis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oakland</masterLabel>
+            <translation><!-- Oakland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rochester</masterLabel>
+            <translation><!-- Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Paul</masterLabel>
+            <translation><!-- Saint Paul --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Diego</masterLabel>
+            <translation><!-- San Diego --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco</masterLabel>
+            <translation><!-- San Francisco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Jose</masterLabel>
+            <translation><!-- San Jose --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- One way --></label>
+        <name>One_way__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return --></label>
+        <name>Return__c</name>
+        <picklistValues>
+            <masterLabel>Bloomington</masterLabel>
+            <translation><!-- Bloomington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brooklyn Park</masterLabel>
+            <translation><!-- Brooklyn Park --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lakeville</masterLabel>
+            <translation><!-- Lakeville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles</masterLabel>
+            <translation><!-- Los Angeles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minneapolis</masterLabel>
+            <translation><!-- Minneapolis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oakland</masterLabel>
+            <translation><!-- Oakland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rochester</masterLabel>
+            <translation><!-- Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Paul</masterLabel>
+            <translation><!-- Saint Paul --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Diego</masterLabel>
+            <translation><!-- San Diego --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco</masterLabel>
+            <translation><!-- San Francisco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Jose</masterLabel>
+            <translation><!-- San Jose --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Returning --></label>
+        <name>Returning__c</name>
+    </fields>
+    <fields>
+        <label><!-- Two Way --></label>
+        <name>Two_Way__c</name>
+    </fields>
+    <layouts>
+        <layout>California User</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Flight Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Minneapolis User</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- California User --></label>
+        <name>California_User</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Minneapolis User --></label>
+        <name>Minneapolis_User</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

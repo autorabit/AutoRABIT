@@ -19,6 +19,13 @@
                 <field>InformationBody</field>
             </layoutItems>
             <layoutItems>
+<<<<<<< HEAD
+=======
+                <behavior>Readonly</behavior>
+                <field>GroupEmail</field>
+            </layoutItems>
+            <layoutItems>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <behavior>Required</behavior>
                 <field>OwnerId</field>
             </layoutItems>

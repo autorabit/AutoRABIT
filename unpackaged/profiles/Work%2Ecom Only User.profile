@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+<<<<<<< HEAD
     <applicationVisibilities>
         <application>CustomApp</application>
         <default>false</default>
@@ -10,12 +11,16 @@
         <default>true</default>
         <visible>true</visible>
     </applicationVisibilities>
+=======
+<<<<<<< HEAD
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <applicationVisibilities>
         <application>Travel_Booking</application>
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+<<<<<<< HEAD
         <apexClass>BuildsManagement</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -88,10 +93,13 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <apexClass>FlightData</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+<<<<<<< HEAD
         <apexClass>ForgotPasswordController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -228,6 +236,18 @@
         <editable>false</editable>
         <field>Account.AccountNumber</field>
         <readable>false</readable>
+=======
+        <apexClass>HotelData</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
+    <custom>false</custom>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.AccountNumber</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -236,6 +256,14 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
+=======
+        <field>Account.Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <field>Account.AnnualRevenue</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -245,11 +273,37 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
+=======
+        <editable>false</editable>
+        <field>Account.CleanStatus</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.CustomerPriority__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.DandbCompanyId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <editable>true</editable>
         <field>Account.Description</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
+=======
+        <editable>false</editable>
+        <field>Account.DunsNumber</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <editable>true</editable>
         <field>Account.Fax</field>
         <readable>true</readable>
@@ -265,8 +319,18 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>true</editable>
         <field>Account.NoOfContacts__c</field>
+=======
+        <editable>false</editable>
+        <field>Account.NaicsCode</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.NaicsDesc</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -275,9 +339,20 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Account.Ownership</field>
         <readable>false</readable>
+=======
+        <editable>true</editable>
+        <field>Account.NumberofLocations__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Ownership</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -290,9 +365,30 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Account.Rating</field>
         <readable>false</readable>
+=======
+        <editable>true</editable>
+        <field>Account.Rating</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.SLAExpirationDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.SLASerialNumber__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.SLA__c</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -300,9 +396,15 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Account.Sic</field>
         <readable>false</readable>
+=======
+        <editable>true</editable>
+        <field>Account.Sic</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -310,6 +412,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Account.Site</field>
         <readable>false</readable>
@@ -322,10 +425,25 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Type</field>
+=======
+        <editable>true</editable>
+        <field>Account.Site</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.TickerSymbol</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Tradestyle</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+<<<<<<< HEAD
         <field>Account.Website</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -348,6 +466,25 @@
         <editable>false</editable>
         <field>Account.infoEx_Id__c</field>
         <readable>false</readable>
+=======
+        <field>Account.Type</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.UpsellOpportunity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Website</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.YearStarted</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -550,9 +687,15 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Case.AssetId</field>
         <readable>false</readable>
+=======
+        <editable>true</editable>
+        <field>Case.AssetId</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -575,6 +718,14 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
+=======
+        <editable>true</editable>
+        <field>Case.EngineeringReqNumber__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <editable>false</editable>
         <field>Case.IsClosedOnCreate</field>
         <readable>false</readable>
@@ -585,6 +736,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Case.IsSelfClosed</field>
         <readable>false</readable>
@@ -612,6 +764,19 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.ParentId</field>
+=======
+        <editable>true</editable>
+        <field>Case.Origin</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.ParentId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.PotentialLiability__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -621,7 +786,26 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Case.Product__c</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+<<<<<<< HEAD
+        <field>Case.Priority</field>
+=======
         <field>Case.Reason</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+<<<<<<< HEAD
+        <field>Case.Reason</field>
+=======
+        <field>Case.SLAViolation__c</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -655,6 +839,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Case.helloexternalId__c</field>
         <readable>false</readable>
@@ -675,6 +860,8 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <editable>true</editable>
         <field>Contact.AccountId</field>
         <readable>true</readable>
@@ -696,8 +883,13 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>Contact.CanAllowPortalSelfReg</field>
         <readable>false</readable>
+=======
+        <field>Contact.CleanStatus</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -746,11 +938,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
+=======
+        <field>Contact.Languages__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <field>Contact.LeadSource</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
+=======
+        <field>Contact.Level__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <field>Contact.MailingAddress</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -785,6 +993,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>true</editable>
         <field>Contact.email_custom__c</field>
         <readable>true</readable>
@@ -810,6 +1019,8 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <editable>false</editable>
         <field>Contract.ActivatedById</field>
         <readable>true</readable>
@@ -876,10 +1087,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Contract.ShippingAddress</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+=======
+        <field>Contract.Pricebook2Id</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contract.ShippingAddress</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <editable>true</editable>
         <field>Contract.SpecialTerms</field>
         <readable>true</readable>
@@ -890,6 +1113,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Contract.helloexternalId__c</field>
         <readable>false</readable>
@@ -920,6 +1144,8 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <editable>true</editable>
         <field>Event.Description</field>
         <readable>true</readable>
@@ -930,11 +1156,14 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Event.IsVisibleInSelfService</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <editable>true</editable>
         <field>Event.Location</field>
         <readable>true</readable>
@@ -956,6 +1185,10 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <field>Flights__c.Adults__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1021,6 +1254,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <field>Idea.Attachment</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1040,6 +1278,29 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
+=======
+        <editable>false</editable>
+        <field>Lead.CleanStatus</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.CompanyDunsNumber</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CurrentGenerators__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.DandbCompanyId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <editable>true</editable>
         <field>Lead.Description</field>
         <readable>true</readable>
@@ -1055,9 +1316,15 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Lead.Fax</field>
         <readable>false</readable>
+=======
+        <editable>true</editable>
+        <field>Lead.Fax</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1090,9 +1357,15 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Lead.MobilePhone</field>
         <readable>false</readable>
+=======
+        <editable>true</editable>
+        <field>Lead.MobilePhone</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -1100,9 +1373,15 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Lead.PartnerAccountId</field>
         <readable>false</readable>
+=======
+        <editable>true</editable>
+        <field>Lead.NumberofLocations__c</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -1111,16 +1390,25 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Lead.Rating</field>
+=======
+        <field>Lead.Primary__c</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Lead.Title</field>
+=======
+        <field>Lead.ProductInterest__c</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Lead.Website</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1143,6 +1431,25 @@
         <editable>false</editable>
         <field>Lead.infoEx_Id__c</field>
         <readable>false</readable>
+=======
+        <field>Lead.Rating</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.SICCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Title</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Website</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -1166,6 +1473,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Opportunity.Description</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1182,20 +1490,37 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.LeadSource</field>
+=======
+        <field>Opportunity.CurrentGenerators__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.DeliveryInstallationStatus__c</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+<<<<<<< HEAD
         <field>Opportunity.NextStep</field>
+=======
+        <field>Opportunity.Description</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Opportunity.Opportunity_Source__c</field>
+=======
+        <field>Opportunity.ExpectedRevenue</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Opportunity.Opportunity_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1233,6 +1558,45 @@
         <editable>false</editable>
         <field>Opportunity.infoEx_Id__c</field>
         <readable>false</readable>
+=======
+        <field>Opportunity.IsPrivate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.LeadSource</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.MainCompetitors__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.NextStep</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.OrderNumber__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.TotalOpportunityQuantity</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.TrackingNumber__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Type</field>
+        <readable>true</readable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -1265,11 +1629,16 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
+=======
+        <editable>true</editable>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <field>OpportunityLineItem.TotalPrice</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>true</editable>
         <field>Product2.Description</field>
         <readable>true</readable>
@@ -1277,25 +1646,47 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product2.Family</field>
+=======
+        <editable>false</editable>
+        <field>Order.ActivatedById</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order.ActivatedDate</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Product2.ProductCode</field>
+=======
+        <field>Order.BillToContactId</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Region_Analitics__c.City__c</field>
+=======
+        <field>Order.BillingAddress</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Region_Analitics__c.State__c</field>
+=======
+        <field>Order.CompanyAuthorizedById</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Region_Analitics__c.Zip_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1322,35 +1713,91 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Solution.IsPublished</field>
+=======
+        <field>Order.CompanyAuthorizedDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order.ContractEndDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order.ContractName</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Order.CustomerAuthorizedById</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.CustomerAuthorizedDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.Description</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+<<<<<<< HEAD
         <field>Solution.IsPublishedInPublicKb</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>Solution.SolutionNote</field>
+=======
+        <field>Order.Name</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order.OpportunityId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.OrderReferenceNumber</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>TariffPlan__c.Region__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>TariffPlan__c.S_no__c</field>
+=======
+        <field>Order.PoDate</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Order.PoNumber</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+<<<<<<< HEAD
         <field>TariffPlan__c.Tariffplan__c</field>
+=======
+        <field>Order.ShipToContactId</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>TariffPlan__c.Validity__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1362,15 +1809,33 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.ActivityDate</field>
+=======
+        <field>Order.ShippingAddress</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Order.Type</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OrderItem.Description</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+<<<<<<< HEAD
         <field>Task.Description</field>
+=======
+        <field>OrderItem.EndDate</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>Task.IsVisibleInSelfService</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1382,10 +1847,24 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.WhatId</field>
+=======
+        <field>OrderItem.ListPrice</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>OrderItem.ProductCode</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>OrderItem.ServiceDate</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+<<<<<<< HEAD
         <field>Task.WhoId</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1427,31 +1906,85 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>WorkGoal.IsKeyCompanyGoal</field>
+=======
+        <field>Product2.Description</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Product2.Family</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.ProductCode</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Solution.IsPublished</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Solution.IsPublishedInPublicKb</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Solution.SolutionNote</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.ActivityDate</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+<<<<<<< HEAD
         <field>product__c.Active__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>product__c.Product_Description__c</field>
+=======
+        <field>Task.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.Type</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.WhatId</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>product__c.infoEx_Id__c</field>
+=======
+        <field>Task.WhoId</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>Account-Account Layout</layout>
         <recordType>Account.gg</recordType>
     </layoutAssignments>
     <layoutAssignments>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <layout>Asset-Asset Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1467,9 +2000,12 @@
         <layout>CaseClose-Close Case Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>CollaborationGroup-Group Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <layout>Contact-Contact Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1479,7 +2015,11 @@
         <layout>Contract-Contract Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>Distributor__c-Distributor Layout</layout>
+=======
+        <layout>DandBCompany-D%26B Company Layout</layout>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </layoutAssignments>
     <layoutAssignments>
         <layout>DuplicateRecordSet-Duplicate Record Set Layout</layout>
@@ -1488,9 +2028,13 @@
         <layout>Event-Event Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>FeedItem-Feed Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+=======
+<<<<<<< HEAD
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <layout>Flights__c-Flight Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1513,6 +2057,7 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Hotel__c-Hotel Layout</layout>
+<<<<<<< HEAD
         <recordType>Hotel__c.Minneapolis_User</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -1524,6 +2069,20 @@
     <layoutAssignments>
         <layout>Lead-Lead Layout</layout>
         <recordType>Lead.TestRecordType</recordType>
+=======
+        <recordType>Hotel__c.Minnesota_User</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+=======
+        <layout>Global-Global Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
+        <layout>Idea-Idea Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Lead-Lead Layout</layout>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </layoutAssignments>
     <layoutAssignments>
         <layout>Macro-Macro Layout</layout>
@@ -1532,6 +2091,7 @@
         <layout>Opportunity-Opportunity Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>Opportunity-Opportunity Layout</layout>
         <recordType>Opportunity.Regular_Deals</recordType>
     </layoutAssignments>
@@ -1558,11 +2118,33 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SalesExecutive__c-SalesExecutive Layout</layout>
+=======
+        <layout>OpportunityLineItem-Opportunity Product Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Order-Order Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>OrderItem-Order Product Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Pricebook2-Price Book Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PricebookEntry-Price Book Entry Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product2-Product Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SocialPersona-Social Persona Layout</layout>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </layoutAssignments>
     <layoutAssignments>
         <layout>Solution-Solution Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>TariffPlan__c-SouthIndiaLayout</layout>
         <recordType>TariffPlan__c.North_India</recordType>
     </layoutAssignments>
@@ -2024,6 +2606,17 @@
         <recordType>Account.gg</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
+=======
+        <layout>Task-Task Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>User-User Layout</layout>
+    </layoutAssignments>
+<<<<<<< HEAD
+    <layoutAssignments>
+        <layout>UserAlt-User Profile Layout</layout>
+    </layoutAssignments>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Flights__c.California_User</recordType>
@@ -2036,14 +2629,23 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+<<<<<<< HEAD
         <recordType>Hotel__c.Minneapolis_User</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
+=======
+        <recordType>Hotel__c.Minnesota_User</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+=======
+>>>>>>> d73954f7b2ddee2385e329aa56c54f5bc4d77b17
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Idea.InternalIdeasIdeaRecordType</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
+<<<<<<< HEAD
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Lead.TestRecordType</recordType>
@@ -2072,6 +2674,8 @@
         <tab>Test__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <tabVisibilities>
         <tab>standard-Account</tab>
         <visibility>DefaultOn</visibility>
@@ -2093,6 +2697,13 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+<<<<<<< HEAD
+=======
+        <tab>standard-DandBCompany</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <tab>standard-DuplicateRecordSet</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -2113,6 +2724,13 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+<<<<<<< HEAD
+=======
+        <tab>standard-Order</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <tab>standard-Pricebook2</tab>
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
@@ -2121,6 +2739,7 @@
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
+<<<<<<< HEAD
         <tab>standard-Solution</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -2142,6 +2761,17 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-WorkRewardFundType</tab>
+=======
+        <tab>standard-SocialPersona</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Solution</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-StreamingChannel</tab>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Work.com Only</userLicense>
@@ -2171,10 +2801,24 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
+=======
+        <name>CreateCustomizeDashboards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <name>CreateCustomizeFilters</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
+=======
+        <name>CreateCustomizeReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <name>CreateTopics</name>
     </userPermissions>
     <userPermissions>
@@ -2183,11 +2827,23 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>EditPublicDocuments</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>EditReports</name>
+=======
+        <name>EditMyDashboards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditMyReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditPublicDocuments</name>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2219,6 +2875,17 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
+=======
+        <name>ViewPublicDashboards</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewPublicReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <name>WorkDotComUserPerm</name>
     </userPermissions>
 </Profile>

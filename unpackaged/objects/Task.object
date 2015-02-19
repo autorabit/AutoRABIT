@@ -60,9 +60,12 @@
         <fullName>Email</fullName>
     </fields>
     <fields>
+<<<<<<< HEAD
         <fullName>IsVisibleInSelfService</fullName>
     </fields>
     <fields>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <fullName>OwnerId</fullName>
         <type>Lookup</type>
     </fields>
@@ -137,6 +140,13 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+<<<<<<< HEAD
+=======
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <fullName>Send Letter</fullName>
                 <default>false</default>
             </picklistValues>
@@ -167,6 +177,13 @@
                 <fullName>Other</fullName>
                 <default>false</default>
             </picklistValues>
+<<<<<<< HEAD
+=======
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             <sorted>false</sorted>
         </picklist>
         <type>Picklist</type>

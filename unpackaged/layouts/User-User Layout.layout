@@ -26,7 +26,11 @@
     <relatedObjects>ProfilePhotoId</relatedObjects>
     <relatedObjects>WorkspaceId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
+<<<<<<< HEAD
     <showHighlightsPanel>true</showHighlightsPanel>
+=======
+    <showHighlightsPanel>false</showHighlightsPanel>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
 </Layout>

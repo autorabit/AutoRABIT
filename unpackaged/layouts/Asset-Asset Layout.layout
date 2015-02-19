@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+<<<<<<< HEAD
     <excludeButtons>Submit</excludeButtons>
+=======
+    <headers>PersonalTagging</headers>
+    <headers>PublicTagging</headers>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
@@ -16,6 +21,7 @@
                 <field>Product2Id</field>
             </layoutItems>
             <layoutItems>
+<<<<<<< HEAD
                 <behavior>Edit</behavior>
                 <field>AccountId</field>
             </layoutItems>
@@ -30,11 +36,36 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SerialNumber</field>
+=======
+                <behavior>Readonly</behavior>
+                <field>ProductCode</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SerialNumber</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>InstallDate</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Status</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Quantity</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Price</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
+<<<<<<< HEAD
                 <field>Status</field>
             </layoutItems>
             <layoutItems>
@@ -44,6 +75,17 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Quantity</field>
+=======
+                <field>AccountId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ContactId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>IsCompetitorProduct</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -51,11 +93,33 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+<<<<<<< HEAD
                 <field>InstallDate</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>UsageEndDate</field>
+=======
+                <field>UsageEndDate</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsTopToBottom</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>false</customLabel>
+        <detailHeading>false</detailHeading>
+        <editHeading>false</editHeading>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CreatedById</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>LastModifiedById</field>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -84,6 +148,7 @@
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
+<<<<<<< HEAD
         <detailHeading>true</detailHeading>
         <editHeading>false</editHeading>
         <label>System Information</label>
@@ -103,6 +168,8 @@
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
         <layoutColumns/>

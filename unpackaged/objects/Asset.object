@@ -102,10 +102,13 @@
         <fullName>Status</fullName>
         <picklist>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Purchased</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <fullName>Shipped</fullName>
                 <default>false</default>
             </picklistValues>
@@ -121,6 +124,13 @@
                 <fullName>Obsolete</fullName>
                 <default>false</default>
             </picklistValues>
+<<<<<<< HEAD
+=======
+            <picklistValues>
+                <fullName>Purchased</fullName>
+                <default>false</default>
+            </picklistValues>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             <sorted>false</sorted>
         </picklist>
         <trackHistory>false</trackHistory>

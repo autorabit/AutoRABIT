@@ -34,11 +34,20 @@
     </actionOverrides>
     <enableFeeds>false</enableFeeds>
     <listViews>
+<<<<<<< HEAD
+=======
+        <fullName>AllActivities</fullName>
+        <filterScope>Team</filterScope>
+        <label>All Activities</label>
+    </listViews>
+    <listViews>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <fullName>MyActivities</fullName>
         <filterScope>Mine</filterScope>
         <label>My Activities</label>
     </listViews>
     <listViews>
+<<<<<<< HEAD
         <fullName>MyDelegatedActivities</fullName>
         <filterScope>Delegated</filterScope>
         <label>My Delegated Activities</label>
@@ -60,6 +69,19 @@
             <field>ACTIVITY.TASK</field>
             <operation>equals</operation>
             <value>1</value>
+=======
+        <fullName>TodaysTasks</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         </filters>
         <filters>
             <field>TASK.DUE_DATE</field>

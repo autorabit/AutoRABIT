@@ -6,7 +6,16 @@
     </caseValues>
     <caseValues>
         <plural>true</plural>
+<<<<<<< HEAD
         <value>ISO-Codes</value>
     </caseValues>
+=======
+        <value>Country-ISO-Codes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Abbrevation --></label>
+        <name>Abbrevation__c</name>
+    </fields>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

@@ -12,11 +12,19 @@
     <enableMultidayEvents>true</enableMultidayEvents>
     <enableRecurringEvents>true</enableRecurringEvents>
     <enableRecurringTasks>true</enableRecurringTasks>
+<<<<<<< HEAD
     <enableSidebarCalendarShortcut>true</enableSidebarCalendarShortcut>
     <enableSimpleTaskCreateUI>true</enableSimpleTaskCreateUI>
     <enableUNSTaskDelegatedToNotifications>true</enableUNSTaskDelegatedToNotifications>
     <showCustomLogoMeetingRequests>false</showCustomLogoMeetingRequests>
     <showEventDetailsMultiUserCalendar>true</showEventDetailsMultiUserCalendar>
+=======
+    <enableSidebarCalendarShortcut>false</enableSidebarCalendarShortcut>
+    <enableSimpleTaskCreateUI>true</enableSimpleTaskCreateUI>
+    <enableUNSTaskDelegatedToNotifications>true</enableUNSTaskDelegatedToNotifications>
+    <showCustomLogoMeetingRequests>false</showCustomLogoMeetingRequests>
+    <showEventDetailsMultiUserCalendar>false</showEventDetailsMultiUserCalendar>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <showHomePageHoverLinksForEvents>true</showHomePageHoverLinksForEvents>
     <showMyTasksHoverLinks>true</showMyTasksHoverLinks>
     <showRequestedMeetingsOnHomePage>true</showRequestedMeetingsOnHomePage>

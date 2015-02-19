@@ -113,7 +113,11 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+<<<<<<< HEAD
         <fullName>CanAllowPortalSelfReg</fullName>
+=======
+        <fullName>CleanStatus</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -153,6 +157,19 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+<<<<<<< HEAD
+=======
+        <fullName>Languages__c</fullName>
+        <externalId>false</externalId>
+        <label>Languages</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <fullName>LastCURequestDate</fullName>
     </fields>
     <fields>
@@ -162,6 +179,7 @@
         <fullName>LeadSource</fullName>
         <picklist>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Advertisement</fullName>
                 <default>false</default>
             </picklistValues>
@@ -199,12 +217,28 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Word of mouth</fullName>
+=======
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Other</fullName>
                 <default>false</default>
             </picklistValues>
+<<<<<<< HEAD
             <picklistValues>
                 <fullName>test1</fullName>
                 <default>false</default>
@@ -215,6 +249,28 @@
             </picklistValues>
             <picklistValues>
                 <fullName>test3</fullName>
+=======
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Secondary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tertiary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Primary</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -260,6 +316,7 @@
         <fullName>Title</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
+<<<<<<< HEAD
     <fields>
         <fullName>email_custom__c</fullName>
         <externalId>false</externalId>
@@ -334,6 +391,15 @@
         <columns>CONTACT.EMAIL</columns>
         <columns>CORE.USERS.ALIAS</columns>
         <columns>CONTACT.BIRTHDATE</columns>
+=======
+    <listViews>
+        <fullName>AllContacts</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Contacts</label>
+    </listViews>
+    <listViews>
+        <fullName>BirthdaysThisMonth</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <filterScope>Everything</filterScope>
         <filters>
             <field>CONTACT.BIRTHDATE</field>
@@ -343,6 +409,7 @@
         <label>Birthdays This Month</label>
     </listViews>
     <listViews>
+<<<<<<< HEAD
         <fullName>NewThisWeek</fullName>
         <columns>FULL_NAME</columns>
         <columns>ACCOUNT.NAME</columns>
@@ -350,6 +417,24 @@
         <columns>CONTACT.PHONE1</columns>
         <columns>CONTACT.EMAIL</columns>
         <columns>CORE.USERS.ALIAS</columns>
+=======
+        <fullName>MyContacts</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Contacts</label>
+    </listViews>
+    <listViews>
+        <fullName>NewLastWeek</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <label>New Last Week</label>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeek</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <filterScope>Everything</filterScope>
         <filters>
             <field>CONTACT.CREATED_DATE</field>
@@ -381,6 +466,7 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+<<<<<<< HEAD
     <webLinks>
         <fullName>GoogleMaps</fullName>
         <availability>online</availability>
@@ -476,4 +562,6 @@
         <showsStatus>false</showsStatus>
         <url>http://weather.yahoo.com/search/weather2?p={!Contact_MailingPostalCode}</url>
     </webLinks>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
 </CustomObject>

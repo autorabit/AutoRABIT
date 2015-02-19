@@ -50,6 +50,7 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
+<<<<<<< HEAD
     <fieldSets>
         <fullName>FieldSetTest</fullName>
         <description>No where</description>
@@ -60,6 +61,8 @@
         </displayedFields>
         <label>FieldSetTest</label>
     </fieldSets>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
     <fields>
         <fullName>ActualCost</fullName>
     </fields>
@@ -166,6 +169,13 @@
         <fullName>Status</fullName>
         <picklist>
             <picklistValues>
+<<<<<<< HEAD
+=======
+                <fullName>Planned</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <fullName>In Progress</fullName>
                 <default>false</default>
             </picklistValues>
@@ -177,10 +187,13 @@
                 <fullName>Aborted</fullName>
                 <default>false</default>
             </picklistValues>
+<<<<<<< HEAD
             <picklistValues>
                 <fullName>Planned</fullName>
                 <default>true</default>
             </picklistValues>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             <sorted>false</sorted>
         </picklist>
         <type>Picklist</type>
@@ -189,6 +202,7 @@
         <fullName>Type</fullName>
         <picklist>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Advertisement</fullName>
                 <default>true</default>
             </picklistValues>
@@ -218,6 +232,49 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Referral Program</fullName>
+=======
+                <fullName>Conference</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partners</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Referral Program</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banner Ads</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telemarketing</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -230,11 +287,14 @@
     </fields>
     <listViews>
         <fullName>AllActiveCampaigns</fullName>
+<<<<<<< HEAD
         <columns>CAMPAIGN.NAME</columns>
         <columns>CAMPAIGN.START_DATE</columns>
         <columns>CAMPAIGN.END_DATE</columns>
         <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
         <columns>CAMPAIGN.STATUS</columns>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <filterScope>Everything</filterScope>
         <filters>
             <field>CAMPAIGN.ACTIVE</field>
@@ -245,11 +305,14 @@
     </listViews>
     <listViews>
         <fullName>MyActiveCampaigns</fullName>
+<<<<<<< HEAD
         <columns>CAMPAIGN.NAME</columns>
         <columns>CAMPAIGN.START_DATE</columns>
         <columns>CAMPAIGN.END_DATE</columns>
         <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
         <columns>CAMPAIGN.STATUS</columns>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <filterScope>Mine</filterScope>
         <filters>
             <field>CAMPAIGN.ACTIVE</field>
@@ -269,6 +332,7 @@
     </searchLayouts>
     <sharingModel>FullAccess</sharingModel>
     <webLinks>
+<<<<<<< HEAD
         <fullName>ViewAllCampaignMembers</fullName>
         <availability>online</availability>
         <displayType>link</displayType>
@@ -289,6 +353,8 @@
         <width>500</width>
     </webLinks>
     <webLinks>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
         <fullName>ViewCampaignInfluenceReport</fullName>
         <availability>online</availability>
         <displayType>link</displayType>

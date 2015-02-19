@@ -89,6 +89,7 @@
         <fullName>LeadSource</fullName>
         <picklist>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Advertisement</fullName>
                 <default>false</default>
             </picklistValues>
@@ -121,10 +122,13 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+=======
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <fullName>Web</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Word of mouth</fullName>
                 <default>false</default>
             </picklistValues>
@@ -142,6 +146,21 @@
             </picklistValues>
             <picklistValues>
                 <fullName>test3</fullName>
+=======
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -191,6 +210,17 @@
         <fullName>Status</fullName>
         <picklist>
             <picklistValues>
+<<<<<<< HEAD
+=======
+                <fullName>Planned</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
                 <fullName>Responded</fullName>
                 <default>false</default>
             </picklistValues>

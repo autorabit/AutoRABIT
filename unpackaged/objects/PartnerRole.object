@@ -5,9 +5,15 @@
         <fullName>ReverseRole</fullName>
         <picklist>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Advertiser</fullName>
                 <default>false</default>
                 <reverseRole>Vendor</reverseRole>
+=======
+                <fullName>System Integrator</fullName>
+                <default>false</default>
+                <reverseRole>Client</reverseRole>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             </picklistValues>
             <picklistValues>
                 <fullName>Agency</fullName>
@@ -15,6 +21,7 @@
                 <reverseRole>Client</reverseRole>
             </picklistValues>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Broker</fullName>
                 <default>false</default>
                 <reverseRole>Agent</reverseRole>
@@ -28,9 +35,13 @@
                 <fullName>Dealer</fullName>
                 <default>false</default>
                 <reverseRole>Supplier</reverseRole>
+=======
+                <fullName>Advertiser</fullName>
+                <default>false</default>
+                <reverseRole>Vendor</reverseRole>
             </picklistValues>
             <picklistValues>
-                <fullName>Developer</fullName>
+                <fullName>VAR/Reseller</fullName>
                 <default>false</default>
                 <reverseRole>Vendor</reverseRole>
             </picklistValues>
@@ -38,6 +49,33 @@
                 <fullName>Distributor</fullName>
                 <default>false</default>
                 <reverseRole>Vendor</reverseRole>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
+            </picklistValues>
+            <picklistValues>
+                <fullName>Developer</fullName>
+                <default>false</default>
+                <reverseRole>Vendor</reverseRole>
+            </picklistValues>
+            <picklistValues>
+<<<<<<< HEAD
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <reverseRole>Vendor</reverseRole>
+=======
+                <fullName>Broker</fullName>
+                <default>false</default>
+                <reverseRole>Agent</reverseRole>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lender</fullName>
+                <default>false</default>
+                <reverseRole>Broker</reverseRole>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Supplier</fullName>
+                <default>false</default>
+                <reverseRole>Retailer</reverseRole>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             </picklistValues>
             <picklistValues>
                 <fullName>Institution</fullName>
@@ -45,6 +83,7 @@
                 <reverseRole>Client</reverseRole>
             </picklistValues>
             <picklistValues>
+<<<<<<< HEAD
                 <fullName>Lender</fullName>
                 <default>false</default>
                 <reverseRole>Broker</reverseRole>
@@ -58,6 +97,21 @@
                 <fullName>VAR/Reseller</fullName>
                 <default>false</default>
                 <reverseRole>Vendor</reverseRole>
+=======
+                <fullName>Contractor</fullName>
+                <default>false</default>
+                <reverseRole>Sub Contractor</reverseRole>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+                <reverseRole>Supplier</reverseRole>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <reverseRole>Client</reverseRole>
+>>>>>>> d5e4dd3d950c19f5b2e48ae21b6ef9ad7ba49fed
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
