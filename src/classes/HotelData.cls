@@ -5,4 +5,5 @@ Public class HotelData
        List<Hotel__c> fl = [Select Id,Check_In__c,Check_Out__c from Hotel__c];
        return fl;
        }
+	   //comment added
 }

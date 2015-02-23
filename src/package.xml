@@ -108,6 +108,7 @@
         <members>OpportunityLineItem</members>
         <members>Order</members>
         <members>OrderItem</members>
+		<members>OrderItemCopy</members>
         <members>PartnerRole</members>
         <members>Pricebook2</members>
         <members>PricebookEntry</members>
@@ -289,7 +290,6 @@
         <members>MarketingProfile</members>
         <members>Partner App Subscription User</members>
         <members>Partner Community Login User</members>
-        <members>Partner Community User</members>
         <members>PlatformPortal</members>
         <members>ReadOnly</members>
         <members>Silver Partner User</members>
